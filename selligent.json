@@ -1,0 +1,8 @@
+{
+    "url": "https://mobile.slgnt.eu/MobilePush/api/",
+    "clientId": "aebdb776-799c-4fff-ba53-3a44825d1a5a",
+    "privateKey": "8z9a9s7U+VvZgfrnZuFyxFVV0FcW9vwKLrTujOdVnHa7txrBmah/8uRd6JzuKF5XWG+08kft4Ic8uAr63zdkPg==",
+    "fullyQualifiedNotificationActivityClassName":"com.decantalo.MainActivity",
+    "notificationSmallIcon": "ic_notification",
+    "notificationLargeIcon": "ic_notification"
+}

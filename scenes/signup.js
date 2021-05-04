@@ -157,12 +157,12 @@ function SignupScreen({ navigation, route }) {
     }
   
     return ( 
-      <ScrollView style={{flex: 1, flexDirection: 'column', backgroundColor: '#f8f8f8'}}>
+      <ScrollView style={styles.mainView}>
           <View style={{flex: 4, alignItems: "center"}}>
-              <View style={{width:'100%', backgroundColor: '#ebebeb', alignItems:'center', position: 'relative', top: 0, bottom: 0, left: 0, right: 0}}>
-                <Image resizeMode="contain" style={{width: '90%', height: win.height/3.75}} source={require("./../assets/logo.png")} />
+              <View style={styles.imageBackground}>
+                <Image resizeMode="contain" style={styles.image} source={require("./../assets/logo.png")} />
               </View>
-              <Image resizeMode="contain" style={{width: '90%', height: win.height/3.75}} source={require("./../assets/registro.png")} />
+              <Image resizeMode="contain" style={styles.image} source={require("./../assets/registro.png")} />
           </View>
           <View style={{marginTop: 20}}>
             <View style={styles.containerChooseLangTitle}>
@@ -238,13 +238,13 @@ function SignupScreen({ navigation, route }) {
               </TouchableOpacity>
             </View> 
           </View>
-          <View style={{alignContent:'center', alignItems:'center', marginTop:20}}>
-            <View style={{height:1, backgroundColor:'#ebebeb', width:'90%'}}></View>
+          <View style={styles.linkView}>
+            <View style={styles.linkline}></View>
           </View>  
-          <View style={{alignContent:'center', alignItems:'center', marginTop:20}}>
-            <Text style={{color:'#a1a1a1'}}>{I18n.t('HAVE_ACCOUNT')}</Text>
+          <View style={styles.linkView}>
+            <Text style={styles.linkColor}>{I18n.t('HAVE_ACCOUNT')}</Text>
             <TouchableOpacity onPress={() => navigation.navigate('Login', route.params)}>
-              <Text style={{color:'#a1a1a1', textDecorationLine: "underline", textDecorationStyle: "solid", textDecorationColor: "#a1a1a1"}}>{I18n.t('SIGNIN_LINK')}</Text>
+              <Text style={styles.linkDecoration}>{I18n.t('SIGNIN_LINK')}</Text>
             </TouchableOpacity>
           </View>
           <View style={{marginBottom: 50}}></View>

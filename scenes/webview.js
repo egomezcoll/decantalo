@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import {
-    Dimensions,
     Image,
     TouchableOpacity,
     View
   } from "react-native";
-  import { WebView } from 'react-native-webview';
-  const win = Dimensions.get('window');
+import { WebView } from 'react-native-webview';
+import { styles } from "../App";
 
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
@@ -54,12 +53,12 @@ import {
                 ref={(r) => (this.webref = r)}
               />
             </View>
-            <View style={{position: "absolute", bottom:0 , left:0, width: win.width, height: 80, backgroundColor: "#393939", flexDirection: "row"}}>
-                <TouchableOpacity style={{flex:1, alignItems: 'center', alignSelf: 'center', marginTop: 15}} onPress={() => changeWebviewURL('home')}><View style={{flex:1, alignItems: 'center', alignSelf: 'center'}}><Image resizeMode="contain" style={{width: 45, height: 45}} source={require("./../assets/home.png")}></Image></View></TouchableOpacity>
-                <TouchableOpacity style={{flex:1, alignItems: 'center', alignSelf: 'center', marginTop: 15}} onPress={() => changeWebviewURL('notifications')}><View style={{flex:1, alignItems: 'center', alignSelf: 'center'}}><Image resizeMode="contain" style={{width: 45, height: 45}} source={require("./../assets/notifications.png")}></Image></View></TouchableOpacity>
-                <TouchableOpacity style={{flex:1, alignItems: 'center', alignSelf: 'center', marginTop: 15}} onPress={() => changeWebviewURL('personalArea')}><View style={{flex:1, alignItems: 'center', alignSelf: 'center'}}><Image resizeMode="contain" style={{width: 45, height: 45}} source={require("./../assets/areapersonal.png")}></Image></View></TouchableOpacity>
-                <TouchableOpacity style={{flex:1, alignItems: 'center', alignSelf: 'center', marginTop: 15}} onPress={() => changeWebviewURL('contact')}><View style={{flex:1, alignItems: 'center', alignSelf: 'center'}}><Image resizeMode="contain" style={{width: 45, height: 45}} source={require("./../assets/contactar.png")}></Image></View></TouchableOpacity>
-                <TouchableOpacity style={{flex:1, alignItems: 'center', alignSelf: 'center', marginTop: 15}} onPress={() => changeWebviewURL('chat')}><View style={{flex:1, alignItems: 'center', alignSelf: 'center'}}><Image resizeMode="contain" style={{width: 45, height: 45}} source={require("./../assets/chat.png")}></Image></View></TouchableOpacity>
+            <View style={styles.menu}>
+                <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('home')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/home.png")}></Image></View></TouchableOpacity>
+                <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('notifications')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/notifications.png")}></Image></View></TouchableOpacity>
+                <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('personalArea')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/areapersonal.png")}></Image></View></TouchableOpacity>
+                <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('contact')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/contactar.png")}></Image></View></TouchableOpacity>
+                <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('chat')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/chat.png")}></Image></View></TouchableOpacity>
             </View>
         </View>
     );

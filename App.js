@@ -74,6 +74,7 @@ export default function App() {
 
  
 export const styles = StyleSheet.create({
+  mainView: {flex: 1, flexDirection: 'column', backgroundColor: '#f8f8f8'},
   containerLangImg: {
     flex: 1,
     alignItems: 'center',
@@ -119,14 +120,8 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold"
   },
- 
-  image: {
-    width: '100%',
-    // Without height undefined it won't work
-    height: '100%',
-    // figure out your image aspect ratio
-    
-  },
+  imageBackground: {width:'100%', backgroundColor: '#ebebeb', alignItems:'center', position: 'relative', top: 0, bottom: 0, left: 0, right: 0},
+  image: {width: '90%', height: win.height/3.75},
  
   loginBtn: {
     width: "60%",
@@ -198,5 +193,12 @@ export const styles = StyleSheet.create({
   checkbox: {
     alignSelf: "center",
   },
-  
+  linkView: {alignContent:'center', alignItems:'center', marginTop:20},
+  linkLine: {height:1, backgroundColor:'#ebebeb', width:'90%'},
+  linkColor: {color:'#a1a1a1'},
+  linkDecoration: {color:'#a1a1a1', textDecorationLine: "underline", textDecorationStyle: "solid", textDecorationColor: "#a1a1a1"},
+  menu: {position: "absolute", bottom:0 , left:0, width: win.width, height: 80, backgroundColor: "#393939", flexDirection: "row"},
+  menuOption: {flex:1, alignItems: 'center', alignSelf: 'center', marginTop: 15},
+  menuOptionView: {flex:1, alignItems: 'center', alignSelf: 'center'},
+  menuOptionImage: {width: 45, height: 45}
 });

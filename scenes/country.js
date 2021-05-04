@@ -53,12 +53,12 @@ function countryScreen({ navigation, route }) {
     }
      
     return (
-        <View style={{flex: 1, flexDirection: 'column', backgroundColor: '#f8f8f8'}}>
+        <View style={styles.mainView}>
           <View style={{flex: 4, alignItems: "center"}}>
-              <View style={{width:'100%', backgroundColor: '#ebebeb', alignItems:'center', position: 'relative', top: 0, bottom: 0, left: 0, right: 0}}>
-                <Image resizeMode="contain" style={{width: '90%', height: win.height/3.75}} source={require("./../assets/logo.png")} />
+              <View style={styles.imageBackground}>
+                <Image resizeMode="contain" style={styles.image} source={require("./../assets/logo.png")} />
               </View>
-              <Image resizeMode="contain" style={{width: '90%', height: win.height/3.75}} source={require("./../assets/pais.png")} />
+              <Image resizeMode="contain" style={styles.image} source={require("./../assets/pais.png")} />
           </View>
           <View style={{flex: 2}}>
             <View style={styles.containerChooseLangTitle}>

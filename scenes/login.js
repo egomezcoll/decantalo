@@ -142,10 +142,10 @@ function LoginScreen({ navigation, route }) {
             <View style={{height:1, backgroundColor:'#ebebeb', width:'90%'}}></View>
           </View>  
           <View style={{alignContent:'center', alignItems:'center', marginTop:20}}>
-            <Text style={{color:'#a1a1a1'}}>{I18n.t('HAVE_ACCOUNT')}</Text>
-            <Text style={{color:'#a1a1a1', textDecorationLine: "underline",
-    textDecorationStyle: "solid",
-    textDecorationColor: "#a1a1a1"}}>{I18n.t('SIGNIN_LINK')}</Text>
+            <Text style={{color:'#a1a1a1'}}>{I18n.t('NOT_HAVE_ACCOUNT')}</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Signup', route.params)}>
+              <Text style={{color:'#a1a1a1', textDecorationLine: "underline", textDecorationStyle: "solid", textDecorationColor: "#a1a1a1"}}>{I18n.t('SIGNUP_LINK')}</Text>
+            </TouchableOpacity>
           </View>
           <View style={{marginBottom: 50}}></View>
       </ScrollView>  

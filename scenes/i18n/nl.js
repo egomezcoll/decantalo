@@ -11,5 +11,7 @@ export default {
     CONTINUAR: "DOORGAAN",
     PAIS_ENVIO: "Wat is je land van verzending?",
     HAVE_ACCOUNT: "Heeft u al een account bij Decántalo?",
-    SIGNIN_LINK: "Log in op je account"
+    SIGNIN_LINK: "Log in op je account",
+    NOT_HAVE_ACCOUNT: "Sie haben noch kein Konto bei Decántalo?",
+    SIGNUP_LINK: "Erstellen Sie es hier"
 };

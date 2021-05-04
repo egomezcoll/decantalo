@@ -11,5 +11,7 @@ export default {
     CONTINUAR: "CONTINUE",
     PAIS_ENVIO: "What country do you want delivery to?",
     HAVE_ACCOUNT: "Do you already have a Decántalo account?",
-    SIGNIN_LINK: "Sign into your account"
+    SIGNIN_LINK: "Sign into your account",
+    NOT_HAVE_ACCOUNT: "Still don't have a Decántalo account?",
+    SIGNUP_LINK: "Create one here"
 };

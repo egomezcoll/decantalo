@@ -243,7 +243,7 @@ function SignupScreen({ navigation, route }) {
           </View>  
           <View style={{alignContent:'center', alignItems:'center', marginTop:20}}>
             <Text style={{color:'#a1a1a1'}}>{I18n.t('HAVE_ACCOUNT')}</Text>
-            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Login', route.params)}>
+            <TouchableOpacity onPress={() => navigation.navigate('Login', route.params)}>
               <Text style={{color:'#a1a1a1', textDecorationLine: "underline", textDecorationStyle: "solid", textDecorationColor: "#a1a1a1"}}>{I18n.t('SIGNIN_LINK')}</Text>
             </TouchableOpacity>
           </View>

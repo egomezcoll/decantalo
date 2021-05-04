@@ -23,7 +23,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
 
-  Selligent.getVersionLib((versionLib) => {
+  /*Selligent.getVersionLib((versionLib) => {
       alert(versionLib);
   });
 
@@ -55,7 +55,7 @@ export default function App() {
         },
         'email': "edugomco884@gmail.com", // required
     }
-  );
+  );*/
   SplashScreen.hide();
     return (
       <NavigationContainer>
@@ -115,6 +115,10 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold"
   },
+  chooseLangTextDE: {
+    fontSize: 22,
+    fontWeight: "bold"
+  },
  
   image: {
     width: '100%',
@@ -144,7 +148,7 @@ export const styles = StyleSheet.create({
   },
   loginText: {
     color: 'white',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "bold"
   },
   inputView: {

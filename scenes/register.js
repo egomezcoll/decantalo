@@ -35,7 +35,7 @@ function RegisterScreen({ navigation, route }) {
           </View>
           <View style={{flex: 2}}>
             <View style={styles.containerChooseLangTitle}>
-              <Text style={styles.chooseLangText}>{I18n.t('REGISTRATE')}</Text>
+              <Text style={languageCode === 'de' ? styles.chooseLangTextDE : styles.chooseLangText}>{I18n.t('REGISTRATE')}</Text>
             </View>
             <View style={styles.containerChooseLang}>
               <TouchableOpacity style={styles.loginBtnXL} onPress={() => navigation.navigate('Login', route.params)}>

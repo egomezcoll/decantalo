@@ -9,5 +9,7 @@ export default {
     REGISTRATE: "Regístrate en Decántalo",
     REGISTRO_NEW_USER: "REGISTRO NUEVO USUARIO",
     CONTINUAR: "CONTINUAR",
-    PAIS_ENVIO: "¿Cuál es tu país de envío?"
+    PAIS_ENVIO: "¿Cuál es tu país de envío?",
+    HAVE_ACCOUNT: "¿Ya tienes una cuenta en Decántalo?",
+    SIGNIN_LINK: "Inicia sesión en tu cuenta"
 };

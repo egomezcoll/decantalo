@@ -63,6 +63,11 @@ function LoginScreen({ navigation, route }) {
           path = `${pathLang}inici-sessio`;
           loginErrorText = "Hi ha hagut un error amb el teu usuari o contrasenya. Si us plau, torna a introduir-los.";
           break; 
+        case 'nl': 
+          pathLang = 'nl/nl/';
+          path = `${pathLang}inici-sessio`;
+          loginErrorText = "Er is een fout opgetreden met je gebruikersnaam of wachtwoord. Voer ze opnieuw in.";
+          break;   
       }
 
       if(email.length === 0 || !isValidEmail()) {
@@ -132,6 +137,15 @@ function LoginScreen({ navigation, route }) {
                   </Text>
                 </TouchableOpacity>
             </View> 
+          </View>
+          <View style={{alignContent:'center', alignItems:'center', marginTop:20}}>
+            <View style={{height:1, backgroundColor:'#ebebeb', width:'90%'}}></View>
+          </View>  
+          <View style={{alignContent:'center', alignItems:'center', marginTop:20}}>
+            <Text style={{color:'#a1a1a1'}}>{I18n.t('HAVE_ACCOUNT')}</Text>
+            <Text style={{color:'#a1a1a1', textDecorationLine: "underline",
+    textDecorationStyle: "solid",
+    textDecorationColor: "#a1a1a1"}}>{I18n.t('SIGNIN_LINK')}</Text>
           </View>
           <View style={{marginBottom: 50}}></View>
       </ScrollView>  

@@ -1,0 +1,30 @@
+{
+  "name": "RNSelligent",
+  "authors": {
+    "AppFoundry": "info@appfoundry.be"
+  },
+  "version": "2.3.0",
+  "summary": "React Native bridge for Selligent SDK",
+  "description": "RNSelligent",
+  "homepage": "https://github.com/SelligentMarketingCloud/MobileSDK-ReactNative",
+  "license": "MIT",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/SelligentMarketingCloud/MobileSDK-ReactNative.git",
+    "tag": "2.3.0"
+  },
+  "source_files": "ios/**/*.{h,m}",
+  "requires_arc": true,
+  "vendored_libraries": "ios/libSelligentMobile2.5.2.a",
+  "libraries": "SelligentMobile2.5.2",
+  "dependencies": {
+    "React": [
+
+    ],
+    "PlotPlugin": [
+
+    ]
+  }
+}

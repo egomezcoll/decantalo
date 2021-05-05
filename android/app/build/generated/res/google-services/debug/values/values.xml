@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">948628187866-0vp6rqitfstd1vhav6bcs1ivim184cvn.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">948628187866</string>
+    <string name="google_api_key" translatable="false">AIzaSyA74YWdXVmQGsuOTW9vIMzydEAq_On_sRE</string>
+    <string name="google_app_id" translatable="false">1:948628187866:android:083d0876fa72b9a5a1d3e3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA74YWdXVmQGsuOTW9vIMzydEAq_On_sRE</string>
+    <string name="google_storage_bucket" translatable="false">decantalo-1539266540389.appspot.com</string>
+    <string name="project_id" translatable="false">decantalo-1539266540389</string>
+</resources>

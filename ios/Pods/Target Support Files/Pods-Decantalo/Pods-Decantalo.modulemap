@@ -1,0 +1,6 @@
+module Pods_Decantalo {
+  umbrella header "Pods-Decantalo-umbrella.h"
+
+  export *
+  module * { export * }
+}

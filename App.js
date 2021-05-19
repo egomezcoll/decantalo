@@ -14,48 +14,12 @@ import SignupScreen from './scenes/signup';
 import CountryScreen from './scenes/country';
 import RedirectScreen from './scenes/redirect';
 import SplashScreen from 'react-native-splash-screen'
-import Selligent from '@selligent-marketing-cloud/selligent-react-native' // Add Selligent import
-import SelligentConstants from '@selligent-marketing-cloud/selligent-react-native/constants';
-
 
 const win = Dimensions.get('window');
 const Stack = createStackNavigator();
 
 export default function App() {
 
-  /*Selligent.getVersionLib((versionLib) => {
-      alert(versionLib);
-  });
-
-  Selligent.enableNotifications(
-    (response) => { // success callback
-      // alert('ENABLED');
-      // alert(response);
-    },
-    (error) => { // error callback
-        alert('NOT ENABLED');
-        alert(error);
-    },
-    true
-  );
-  Selligent.sendEvent(
-    (response) => { // success callback
-        alert('SEND EVENT OK ');
-        alert(response);
-    },
-    (error) => { // error callback
-        alert('OOOOHH SEND EVENT NOK');
-        alert(error);
-    },
-    {
-        'type': SelligentConstants.EventType.USER_LOGIN, // specific event
-        'data': { // optional
-            id: '1337',
-            description: "this is some extra information concerning this event"
-        },
-        'email': "edugomco884@gmail.com", // required
-    }
-  );*/
   SplashScreen.hide();
     return (
       <NavigationContainer>
@@ -115,6 +79,11 @@ export const styles = StyleSheet.create({
   chooseLangText: {
     fontSize: 24,
     fontWeight: "bold"
+  },
+  chooseLangTextShrink: {
+    flexWrap: "wrap",
+    fontSize: 24,
+    fontWeight: "bold",
   },
   chooseLangTextDE: {
     fontSize: 22,

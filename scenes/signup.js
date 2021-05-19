@@ -79,16 +79,71 @@ function SignupScreen({ navigation, route }) {
       if(!errorHandled){
         setSignupError('Por favor, revisa los datos introducidos');
       }
+    }
 
+    const translateErrorCheckbox = (languageCode) => {
+      let errorCheckboxText = 'Tienes que aceptar las condiciones para continuar';
+      switch(languageCode){
+        case 'ca':
+          errorCheckboxText = "Has d'acceptar les condicions per continuar";
+          break;
+        case 'de':
+          errorCheckboxText = 'Sie müssen die Bedingungen akzeptieren, um fortfahren zu können';
+          break;
+        case 'fr':
+          errorCheckboxText = 'Vous devez accepter les conditions pour continuer';
+          break;
+        case 'en':
+          errorCheckboxText = 'You must accept the conditions to continue';
+          break;
+      }
 
-      
+      return errorCheckboxText;
+    }
+    const translateErrorEmptyField = (languageCode) => {
+      let errorEmptyFieldText = 'Este campo es obligatorio. Por favor, rellénalo.';
+      switch(languageCode){
+        case 'ca':
+          errorEmptyFieldText = "Aquest camp és obligatori. Si us plau, omple'l.";
+          break;
+        case 'de':
+          errorEmptyFieldText = 'Dies ist ein Pflichtfeld. Bitte füllen Sie es aus.';
+          break;
+        case 'fr':
+          errorEmptyFieldText = 'Ce champ est obligatoire. Veuillez le remplir.';
+          break;
+        case 'en':
+          errorEmptyFieldText = 'This is a required field. Please fill it in.';
+          break;
+      }
+
+      return errorEmptyFieldText;
+    }
+    const translateErrorEmailInvalid = (languageCode) => {
+      let errorEmailInvalidText = 'Email inválido';
+      switch(languageCode){
+        case 'ca':
+          errorEmailInvalidText = "Email invàlid";
+          break;
+        case 'de':
+          errorEmailInvalidText = 'Ungültige E-Mail';
+          break;
+        case 'fr':
+          errorEmailInvalidText = 'Email invalide';
+          break;
+        case 'en':
+          errorEmailInvalidText = 'Ivalid Email';
+          break;
+      }
+
+      return errorEmailInvalidText;
     }
     const doSignup = () => {
         setSignupError('');
 
         if(!toggleCheckBox){
           setCheckboxError(true);
-          setSignupError('Debes seleccionar la casilla de verificación si quieres continuar');
+          setSignupError(translateErrorCheckbox(languageCode));
         }else{
           setCheckboxError(false);
         }
@@ -100,25 +155,25 @@ function SignupScreen({ navigation, route }) {
         }
         if(lastname.length === 0) {
           setLastnameError(true);
-          setSignupError('Por favor, introduce los apellidos');
+          setSignupError(translateErrorEmptyField(languageCode));
         }else {
             setLastnameError(false);
         }
         if(name.length === 0) {
           setNameError(true);
-          setSignupError('Por favor, introduce un nombre');
+          setSignupError(translateErrorEmptyField(languageCode));
         }else{
             setNameError(false);
         }
         if(password.length <= 4) {
           setPasswordError(true);
-          setSignupError('Por favor, revisa la contraseña introducida. Utiliza un formato que coincida con el solicitado');
+          setSignupError(translateErrorEmptyField(languageCode));
         }else {
             setPasswordError(false);
         }
         if(email.length === 0 || !isValidEmail()) {
           setEmailError(true);
-          setSignupError('Por favor, revisa el email introducido');
+          setSignupError(translateErrorEmptyField(languageCode));
         } else {
             setEmailError(false);
         }
@@ -138,21 +193,40 @@ function SignupScreen({ navigation, route }) {
               return encodeURIComponent(key) + '=' + encodeURIComponent(details[key]);
             }).join('&');
             
-         
-            fetch(`https://www.decantalo.com/es/es/iniciar-sesion?create_account=1`, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-                },
-                body: searchParams
+            fetch(`https://bpi.briteverify.com/api/v1/fullverify`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'ApiKey: 76770447-19f1-40d0-b7b1-12c69a62e44f'
+              },
+              body:  JSON.stringify({"email":email})
             })
-            .then((resp)=>{ return resp.text() }).then((text)=>{ 
-                text.includes('js-invalid-feedback-browser') ? showSignupError(text): navigation.navigate('Country', {
-                email: email,
-                password: password,
-                languageCode: languageCode
-                }) 
+            .then(response => response.json())
+            .then(data => {
+              if(data.email.status === 'valid') {
+                  fetch(`https://www.decantalo.com/es/es/iniciar-sesion?create_account=1`, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                    },
+                    body: searchParams
+                })
+                .then((resp)=>{ return resp.text() }).then((text)=>{ 
+                    text.includes('js-invalid-feedback-browser') ? showSignupError(text): navigation.navigate('Country', {
+                    email: email,
+                    password: password,
+                    languageCode: languageCode
+                    }) 
+                });
+              } else {
+                setEmailError(true);
+                setSignupError(translateErrorEmailInvalid(languageCode));
+              }
+            })
+            .catch((error) => {
+                console.error(error);
             });
+           
         }
     }
   

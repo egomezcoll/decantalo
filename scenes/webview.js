@@ -9,7 +9,7 @@ import { styles } from "../App";
 
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
-
+    const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
     const loginAction = {
         'es': 'iniciar-sesion',
         'ca': 'inici-sessio',
@@ -48,7 +48,13 @@ import { styles } from "../App";
     return (
       <View style={{flex: 1}}>
           <View style={{flex: 5}}>
-            <WebView
+            <WebView style={ isFirstRenderTime ? {display:'none'} : {display:'flex'}}
+                onLoadEnd={() => {
+                  if(isFirstRenderTime){
+                    setIsFirstRenderTime(false);
+                    changeWebviewURL('home');
+                  }
+                }}
                 source={{ uri: url}}
                 ref={(r) => (this.webref = r)}
               />

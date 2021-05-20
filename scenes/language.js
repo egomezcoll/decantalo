@@ -7,10 +7,13 @@ import {
     TouchableOpacity
   } from "react-native";
 import { styles } from "./../App";
-
 import Picker from '@gregfrench/react-native-wheel-picker'
+import SplashScreen from 'react-native-splash-screen'
+SplashScreen.hide();
+
 const win = Dimensions.get('window');
 const PickerItem = Picker.Item;
+
 function LanguageScreen({ navigation }) {
     const [selectedItem, setSelectedItem ] = useState(2);
     const itemList = [ {name: 'Deustche', code: 'de'}, {name: 'English', code: 'en'}, {name: 'Español', code: 'es'}, {name: 'Français', code: 'fr'}, {name: 'Català', code: 'ca'}];

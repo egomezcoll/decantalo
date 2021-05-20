@@ -6,6 +6,7 @@ import {
   } from "react-native";
 import { WebView } from 'react-native-webview';
 import { styles } from "../App";
+import SplashScreen from 'react-native-splash-screen'
 
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
@@ -24,6 +25,7 @@ import { styles } from "../App";
       switch(section){
         case 'home': 
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);
+          SplashScreen.hide();
           break;
         case 'notifications': 
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);

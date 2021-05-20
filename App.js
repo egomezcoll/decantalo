@@ -13,14 +13,12 @@ import WebviewScreen from './scenes/webview';
 import SignupScreen from './scenes/signup';
 import CountryScreen from './scenes/country';
 import RedirectScreen from './scenes/redirect';
-import SplashScreen from 'react-native-splash-screen'
 
 const win = Dimensions.get('window');
 const Stack = createStackNavigator();
 
 export default function App() {
 
-  SplashScreen.hide();
     return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>

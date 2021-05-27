@@ -46,9 +46,6 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Inloggen"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Inloggen met Google"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Overige"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Overige"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Zoekopdracht wissen"</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Zoeken"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Zoeken"</string>
     <string name="sm_permission_explanation_location">Toegang locatie is nodig om te laten zien waar je bent op de kaart.</string>
     <string name="sm_permission_explanation_write_external_storage">Toegang tot externe opslag is nodig om foto\'s te gebruiken vanaf de galerij.</string>

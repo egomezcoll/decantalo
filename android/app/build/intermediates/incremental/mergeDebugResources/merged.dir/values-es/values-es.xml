@@ -46,9 +46,6 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Iniciar sesión"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Iniciar sesión con Google"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Varias"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Varias"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Borra la búsqueda"</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Buscar"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Buscar"</string>
     <string name="sm_permission_explanation_location">Se requiere acceso a la ubicación para mostrar dónde se encuentra en el mapa.</string>
     <string name="sm_permission_explanation_write_external_storage">Se requiere acceso a almacenamiento externo para utilizar las imágenes de la galería.</string>

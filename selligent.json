@@ -1,7 +1,7 @@
 {
     "url": "https://mobile.slgnt.eu/MobilePush/api/",
-    "clientId": "aebdb776-799c-4fff-ba53-3a44825d1a5a",
-    "privateKey": "8z9a9s7U+VvZgfrnZuFyxFVV0FcW9vwKLrTujOdVnHa7txrBmah/8uRd6JzuKF5XWG+08kft4Ic8uAr63zdkPg==",
+    "clientId": "432410da-8839-4f54-82d1-da44e6705d66",
+    "privateKey": "nXjg1xHoeWwmTDOxpxKuYLf3YqHSEnE3A/esOrAUlff4TY66phgZ0ivTpESOVAiZZmICr5/EoSDr3jYokD9WnA==",
     "fullyQualifiedNotificationActivityClassName":"com.decantalo.MainActivity",
     "notificationSmallIcon": "ic_notification",
     "notificationLargeIcon": "ic_notification"

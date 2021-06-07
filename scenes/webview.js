@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import {
     Image,
     TouchableOpacity,
-    View
+    View,
+    Platform
   } from "react-native";
 import { WebView } from 'react-native-webview';
 import { styles } from "../App";
@@ -24,7 +25,7 @@ import SplashScreen from 'react-native-splash-screen'
     const changeWebviewURL = (section) => {
       switch(section){
         case 'home': 
-          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);
+          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`);
           SplashScreen.hide();
           break;
         case 'notifications': 
@@ -48,9 +49,9 @@ import SplashScreen from 'react-native-splash-screen'
       }
     };
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor:"#393939"}}>
           <View style={{flex: 5}}>
-            <WebView style={ isFirstRenderTime ? {display:'none'} : {display:'flex'}}
+            <WebView style={ isFirstRenderTime ? {display:'none'} : {display:'flex'}, {marginTop: Platform.OS === 'ios' ? 40 : 0}}
                 onLoadEnd={() => {
                   if(isFirstRenderTime){
                     setIsFirstRenderTime(false);

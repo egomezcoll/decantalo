@@ -28,7 +28,7 @@ export default function App() {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} /> 
           <Stack.Screen name="Country" component={CountryScreen} /> 
-          <Stack.Screen name="Webview" component={WebviewScreen} />
+          <Stack.Screen name="Webview" component={WebviewScreen} options={{gestureEnabled: false}} />
         </Stack.Navigator>
       </NavigationContainer>
     );

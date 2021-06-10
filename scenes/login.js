@@ -130,6 +130,11 @@ function LoginScreen({ navigation, route }) {
                 onChangeText={(password) => setPassword(password)}
               />
             </View>
+            <View style={styles.linkViewForgot}>
+              <TouchableOpacity onPress={() => navigation.navigate('Forgot', route.params)}>
+                <Text style={styles.linkDecoration}>{I18n.t('FORGOT_LINK')}</Text>
+              </TouchableOpacity>
+            </View>
             <View style={styles.containerLoginBtnScrollView}>
                 <TouchableOpacity style={styles.loginBtn} onPress={() => checkLogin()}>
                   <Text style={styles.loginText}>

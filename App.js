@@ -13,6 +13,7 @@ import WebviewScreen from './scenes/webview';
 import SignupScreen from './scenes/signup';
 import CountryScreen from './scenes/country';
 import RedirectScreen from './scenes/redirect';
+import ForgotPasswordScreen from './scenes/forgot';
 
 const win = Dimensions.get('window');
 const Stack = createStackNavigator();
@@ -26,6 +27,7 @@ export default function App() {
           <Stack.Screen name="Language" component={LanguageScreen} /> 
           <Stack.Screen name="Register" component={RegisterScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="Forgot" component={ForgotPasswordScreen} /> 
           <Stack.Screen name="Signup" component={SignupScreen} /> 
           <Stack.Screen name="Country" component={CountryScreen} /> 
           <Stack.Screen name="Webview" component={WebviewScreen} options={{gestureEnabled: false}} />
@@ -108,9 +110,24 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     backgroundColor: "#b80000",
   },
+  loginBtnXXL: {
+    width: "90%",
+    borderRadius: 4,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    marginBottom: 10,
+    backgroundColor: "#b80000",
+  },
   loginText: {
     color: 'white',
     fontSize: 16,
+    fontWeight: "bold"
+  },
+  loginTextXS: {
+    color: 'white',
+    fontSize: 13,
     fontWeight: "bold"
   },
   inputView: {
@@ -161,6 +178,7 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
   },
   linkView: {alignContent:'center', alignItems:'center', marginTop:20},
+  linkViewForgot: {alignContent:'center', alignItems:'center', marginTop:5},
   linkLine: {height:1, backgroundColor:'#ebebeb', width:'90%'},
   linkColor: {color:'#a1a1a1'},
   linkDecoration: {color:'#a1a1a1', textDecorationLine: "underline", textDecorationStyle: "solid", textDecorationColor: "#a1a1a1"},

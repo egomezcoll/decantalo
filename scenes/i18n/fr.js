@@ -12,6 +12,11 @@ export default {
     PAIS_ENVIO: "Dans quel pays souhaitez-vous expédier?",
     HAVE_ACCOUNT: "Vous n'avez toujours pas de compte Decántalo?",
     SIGNIN_LINK: "Connectez-vous à votre compte",
-    NOT_HAVE_ACCOUNT: "Vous n'avez toujours pas de compte Decántalo ?",
-    SIGNUP_LINK: "Créez-le ici"
+    NOT_HAVE_ACCOUNT: "Vous n'avez toujours pas de compte Decántalo?",
+    SIGNUP_LINK: "Créez-le ici",
+    FORGOT_LINK: "Vous avez oublié votre mot de passe?",
+    FORGOT:"Créer un nouveau mot de passe",
+    FORGOT_QUESTION: "Vous ne vous souvenez pas de votre mot de passe? Ne vous inquiétez pas, cela arrive parfois.",
+    FORGOT_INSTRUCTION:"Entrez le compte de messagerie que vous avez utilisé pour vous inscrire sur Decántalo et nous vous enverrons un e-mail afin que vous puissiez réinitialiser le mot de passe.",
+    FORGOT_ENVIAR:"ENVOYER E-MAIL DE RÉCUPÉRATION DE MOT DE PASSE",
 };

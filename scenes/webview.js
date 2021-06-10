@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     Image,
     TouchableOpacity,
@@ -12,6 +12,10 @@ import SplashScreen from 'react-native-splash-screen'
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
+    useEffect(() => {
+      SplashScreen.hide();
+    }, []);
+    
     const loginAction = {
         'es': 'iniciar-sesion',
         'ca': 'inici-sessio',
@@ -26,7 +30,6 @@ import SplashScreen from 'react-native-splash-screen'
       switch(section){
         case 'home': 
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`);
-          SplashScreen.hide();
           break;
         case 'notifications': 
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);

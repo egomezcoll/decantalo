@@ -13,5 +13,10 @@ export default {
     HAVE_ACCOUNT: "Sie haben bereits ein Konto bei Decántalo?",
     SIGNIN_LINK: "Mit Ihrem Konto anmelden",
     NOT_HAVE_ACCOUNT: "Sie haben noch kein Konto bei Decántalo?",
-    SIGNUP_LINK: "Erstellen Sie es hier"
+    SIGNUP_LINK: "Erstellen Sie es hier",
+    FORGOT_LINK: "Haben Sie Ihr Passwort vergessen?",
+    FORGOT:"Neues Passwort erstellen",
+    FORGOT_QUESTION: "Sie haben Ihr Passwort vergessen? Machen Sie sich keine Sorgen, das kann schon mal passieren.",
+    FORGOT_INSTRUCTION:"Geben Sie das E-Mail-Konto ein, mit dem Sie sich bei Decántalo registriert haben und wir senden Ihnen eine E-Mail, damit Sie ein neues erstellen können.",
+    FORGOT_ENVIAR:"EMAIL ZUR PASSWORTWIEDERHERSTELLUNG SENDEN",    
 };

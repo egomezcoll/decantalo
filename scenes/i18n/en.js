@@ -13,5 +13,10 @@ export default {
     HAVE_ACCOUNT: "Do you already have a Decántalo account?",
     SIGNIN_LINK: "Sign into your account",
     NOT_HAVE_ACCOUNT: "Still don't have a Decántalo account?",
-    SIGNUP_LINK: "Create one here"
+    SIGNUP_LINK: "Create one here",
+    FORGOT_LINK: "Have you forgotten your password?",
+    FORGOT:"New password",
+    FORGOT_QUESTION: "Have you forgotten your password? Don't worry, it happens.",
+    FORGOT_INSTRUCTION:"Enter the email account you used to register with Decántalo and we will send you an email so you can create a new one.",
+    FORGOT_ENVIAR:"SEND PASSWORD RESTORE EMAIL",
 };

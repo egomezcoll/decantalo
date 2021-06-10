@@ -13,5 +13,10 @@ export default {
     HAVE_ACCOUNT: "Ja tens un compte a Decántalo?",
     SIGNIN_LINK: "Inicia la sessió al compte",
     NOT_HAVE_ACCOUNT: "Encara no tens un compte a Decántalo?",
-    SIGNUP_LINK: "Pots crear un compte en aquest enllaç"
+    SIGNUP_LINK: "Pots crear un compte en aquest enllaç",
+    FORGOT_LINK: "Has oblidat la teva contrasenya?",
+    FORGOT:"Crear nova contrasenya",
+    FORGOT_QUESTION: "No recordes la contrasenya? No et preocupis, de vegades passa.",
+    FORGOT_INSTRUCTION:"Introdueix el compte de mail que vas utilitzar per registrar-te a Decántalo i t'enviarem un mail perquè puguis crear una nova.",
+    FORGOT_ENVIAR:"ENVIAR MAIL RECUPERACIÓ CONTRASENYA",
 };

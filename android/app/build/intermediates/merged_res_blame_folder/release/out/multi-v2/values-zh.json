@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Adri\\Documents\\ONVIA\\Decantalo\\decantalo sin actualizar\\decantalo-develop (5)\\decantalo-develop\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Adri\\.gradle\\caches\\transforms-2\\files-2.1\\db0d5ff99d7f6ff5d7bde9ae451bf184\\jetified-WheelPicker-1.0.3\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,425",
+                        "endLines": "15,29",
+                        "endColumns": "19,19",
+                        "endOffsets": "420,759"
+                    }
+                }
+            ]
+        }
+    ]
+}

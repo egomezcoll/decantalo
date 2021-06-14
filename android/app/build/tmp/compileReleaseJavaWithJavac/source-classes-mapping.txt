@@ -1,0 +1,9 @@
+com/lluraferi/decantaloes/BuildConfig.java
+ com.lluraferi.decantaloes.BuildConfig
+com/decantalo/MainApplication.java
+ com.lluraferi.decantaloes.MainApplication
+ com.lluraferi.decantaloes.MainApplication$1
+com/decantalo/MainActivity.java
+ com.lluraferi.decantaloes.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

@@ -3,7 +3,8 @@ import {
     Image,
     TouchableOpacity,
     View,
-    Platform
+    FlatList,
+    Platform, Text
   } from "react-native";
 import { WebView } from 'react-native-webview';
 import { styles } from "../App";
@@ -12,6 +13,9 @@ import SplashScreen from 'react-native-splash-screen'
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
+    const [isNotificationsView , setIsNotificationsView] = useState(false);
+    const [haveNotifications , setHaveNotifications] = useState(false);
+
     useEffect(() => {
       SplashScreen.hide();
     }, []);
@@ -28,33 +32,38 @@ import SplashScreen from 'react-native-splash-screen'
   
     const changeWebviewURL = (section) => {
       switch(section){
-        case 'home': 
+        case 'home':
+          setIsNotificationsView(false);
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`);
           break;
         case 'notifications': 
-          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);
+          setIsNotificationsView(true);
           break;  
         case 'personalArea': 
+          setIsNotificationsView(false);
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/area-personal`);
           break;
         case 'contact': 
+          setIsNotificationsView(false);
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/contacta-con-decantalo`);
           break;  
         case 'chat': 
-            this.webref.injectJavaScript(`
+          setIsNotificationsView(false);
+          this.webref.injectJavaScript(`
             document.getElementById('livechat-wrapper').click();
             true;
           `);
           break; 
         
         default:
+          setIsNotificationsView(false);
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);
       }
     };
     return (
       <View style={{flex: 1, backgroundColor:"#393939"}}>
-          <View style={{flex: 5}}>
-            <WebView style={ isFirstRenderTime ? {display:'none'} : {display:'flex'}, {marginTop: Platform.OS === 'ios' ? 40 : 0}}
+          <View style={{flex: isNotificationsView ? 0 : 5}}>
+            <WebView style={ isFirstRenderTime ? {width:'none'} : {display:'flex'},{marginTop: Platform.OS === 'ios' ? 40 : 0}}
                 onLoadEnd={() => {
                   if(isFirstRenderTime){
                     setIsFirstRenderTime(false);
@@ -64,6 +73,44 @@ import SplashScreen from 'react-native-splash-screen'
                 source={{ uri: url}}
                 ref={(r) => (this.webref = r)}
               />
+            </View>
+            <View style={{flex: isNotificationsView ? 5 : 0}}>
+              <View style={styles.mainView}>
+                <View style={{flex: 1, alignItems: "center"}}>
+                    <View style={styles.imageBackground}>
+                      <Image resizeMode="contain" style={styles.image} source={require("./../assets/logo.png")} />
+                    </View>
+                </View>
+                <View style={styles.containerList}>
+                  { haveNotifications ? <FlatList
+                    data={[
+                      {key: 'Devin'},
+                      {key: 'Dan'},
+                      {key: 'Dominic'},
+                      {key: 'Jackson'},
+                      {key: 'James'},
+                      {key: 'Joel'},
+                      {key: 'John'},
+                      {key: 'Jillian'},
+                      {key: 'Jimmy'},
+                      {key: 'Julie'},
+                    ]}
+                    renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+                    ItemSeparatorComponent={renderSeparator = () => {  
+                      return (  
+                          <View  
+                              style={{  
+                                  height: 1,  
+                                  width: "100%",  
+                                  backgroundColor: "#000",  
+                              }}  
+                          />  
+                      );  
+                  }}  
+
+                  /> : <Text>Notifications not enabled</Text>}
+                </View>
+              </View>
             </View>
             <View style={styles.menu}>
                 <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('home')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/home.png")}></Image></View></TouchableOpacity>

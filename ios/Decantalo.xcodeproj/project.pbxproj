@@ -41,6 +41,7 @@
 		331CFABC3C4F99C3FD482E0A /* Pods-Decantalo-DecantaloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decantalo-DecantaloTests.debug.xcconfig"; path = "Target Support Files/Pods-Decantalo-DecantaloTests/Pods-Decantalo-DecantaloTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C3D23EF00C7EADC6F028738 /* Pods-Decantalo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decantalo.release.xcconfig"; path = "Target Support Files/Pods-Decantalo/Pods-Decantalo.release.xcconfig"; sourceTree = "<group>"; };
 		5E310D9567D6DFCE3FB0E0F7 /* libPods-Decantalo-DecantaloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Decantalo-DecantaloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2C5FA8269DAB7600AEFDD1 /* Decantalo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Decantalo.entitlements; path = Decantalo/Decantalo.entitlements; sourceTree = "<group>"; };
 		7E3B2A2F263B4B560073D845 /* selligent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = selligent.json; path = ../selligent.json; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Decantalo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9058F265F2E432B770EC16C4 /* Pods-Decantalo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decantalo.debug.xcconfig"; path = "Target Support Files/Pods-Decantalo/Pods-Decantalo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		13B07FAE1A68108700A75B9A /* Decantalo */ = {
 			isa = PBXGroup;
 			children = (
+				7E2C5FA8269DAB7600AEFDD1 /* Decantalo.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -487,7 +489,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CODE_SIGN_ENTITLEMENTS = Decantalo/Decantalo.entitlements;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = WQX5J2Z6W8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Decantalo/Info.plist;
@@ -495,13 +498,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 2.0.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.reskyt.decantaloes;
+				PRODUCT_BUNDLE_IDENTIFIER = WQX5J2Z6W8.com.reskyt.decantaloes;
 				PRODUCT_NAME = Decantalo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -516,20 +519,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CODE_SIGN_ENTITLEMENTS = Decantalo/Decantalo.entitlements;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = WQX5J2Z6W8;
 				INFOPLIST_FILE = Decantalo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 2.0.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.reskyt.decantaloes;
+				PRODUCT_BUNDLE_IDENTIFIER = WQX5J2Z6W8.com.reskyt.decantaloes;
 				PRODUCT_NAME = Decantalo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

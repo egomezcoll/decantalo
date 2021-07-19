@@ -14,11 +14,42 @@ import SignupScreen from './scenes/signup';
 import CountryScreen from './scenes/country';
 import RedirectScreen from './scenes/redirect';
 import ForgotPasswordScreen from './scenes/forgot';
+import Selligent from '@selligent-marketing-cloud/selligent-react-native' // Add Selligent import
 
 const win = Dimensions.get('window');
 const Stack = createStackNavigator();
 
 export default function App() {
+  Selligent.enableNotifications(
+    (response) => { // success callback
+      alert(response);
+    },
+    (error) => { // error callback
+    },
+    true
+);
+  Selligent.displayLastReceivedRemotePushNotification(
+    (response) => { // success callback
+        alert(response);
+    }
+);
+Selligent.getLastRemotePushNotification(
+  (response) => { // success callback
+      alert('last remote push notification -> '+response)
+  }
+);
+Selligent.subscribeToEvents(
+  (response) => { // success callback
+      alert('Event recieved success '+response)
+  },
+  (error) => { // error callback
+      alert('Event error '+error)
+  },
+  (eventCallback) => {
+      alert('EVENT CALLBACK', eventCallback)
+  }
+);
+
 
     return (
       <NavigationContainer>
@@ -177,6 +208,15 @@ export const styles = StyleSheet.create({
   checkbox: {
     alignSelf: "center",
   },
+  containerList: {
+    flex: 3,
+    paddingTop: 22
+   },
+   item: {
+     padding: 10,
+     fontSize: 18,
+     height: 44,
+   },
   linkView: {alignContent:'center', alignItems:'center', marginTop:20},
   linkViewForgot: {alignContent:'center', alignItems:'center', marginTop:5},
   linkLine: {height:1, backgroundColor:'#ebebeb', width:'90%'},

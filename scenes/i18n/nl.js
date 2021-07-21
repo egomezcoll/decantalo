@@ -13,5 +13,6 @@ export default {
     HAVE_ACCOUNT: "Heeft u al een account bij Decántalo?",
     SIGNIN_LINK: "Log in op je account",
     NOT_HAVE_ACCOUNT: "Sie haben noch kein Konto bei Decántalo?",
-    SIGNUP_LINK: "Erstellen Sie es hier"
+    SIGNUP_LINK: "Erstellen Sie es hier",
+    NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
 };

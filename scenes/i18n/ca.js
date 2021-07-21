@@ -19,4 +19,5 @@ export default {
     FORGOT_QUESTION: "No recordes la contrasenya? No et preocupis, de vegades passa.",
     FORGOT_INSTRUCTION:"Introdueix el compte de mail que vas utilitzar per registrar-te a Decántalo i t'enviarem un mail perquè puguis crear una nova.",
     FORGOT_ENVIAR:"ENVIAR MAIL RECUPERACIÓ CONTRASENYA",
+    NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
 };

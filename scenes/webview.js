@@ -9,15 +9,40 @@ import {
 import { WebView } from 'react-native-webview';
 import { styles } from "../App";
 import SplashScreen from 'react-native-splash-screen'
+import Selligent from '@selligent-marketing-cloud/selligent-react-native' // Add Selligent import
+import I18n from 'react-native-i18n';
+import en from './i18n/en';
+import fr from './i18n/fr';
+import de from './i18n/de';
+import ca from './i18n/ca';
+import es from './i18n/es';
+I18n.translations = {
+  en,
+  fr,
+  de,
+  ca,
+  es
+};
 
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
     const [isNotificationsView , setIsNotificationsView] = useState(false);
     const [haveNotifications , setHaveNotifications] = useState(false);
+    const [notificationsData, setNotificationsData] = useState([]);
 
     useEffect(() => {
       SplashScreen.hide();
+      Selligent.getInAppMessages(
+        (response) => { // success callback
+          if(response.length === 0){
+            setHaveNotifications(false);
+          }else {
+            setHaveNotifications(true);
+            setNotificationsData(response);
+          }
+        }
+    );
     }, []);
     
     const loginAction = {
@@ -83,19 +108,8 @@ import SplashScreen from 'react-native-splash-screen'
                 </View>
                 <View style={styles.containerList}>
                   { haveNotifications ? <FlatList
-                    data={[
-                      {key: 'Devin'},
-                      {key: 'Dan'},
-                      {key: 'Dominic'},
-                      {key: 'Jackson'},
-                      {key: 'James'},
-                      {key: 'Joel'},
-                      {key: 'John'},
-                      {key: 'Jillian'},
-                      {key: 'Jimmy'},
-                      {key: 'Julie'},
-                    ]}
-                    renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+                    data={notificationsData}
+                    renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
                     ItemSeparatorComponent={renderSeparator = () => {  
                       return (  
                           <View  
@@ -108,7 +122,7 @@ import SplashScreen from 'react-native-splash-screen'
                       );  
                   }}  
 
-                  /> : <Text>Notifications not enabled</Text>}
+                /> : <View style={{flex: 1, alignItems:'center', flexDirection: 'column', backgroundColor: '#f8f8f8'}}><View style={{alignItems:"center", marginTop:20,width:"80%"}}><Text>{I18n.t('NO_NOTIFICATIONS')}</Text></View></View>}
                 </View>
               </View>
             </View>

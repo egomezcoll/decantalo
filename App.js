@@ -33,7 +33,7 @@ export default function App() {
     },
     (error) => { // error callback
     },
-    false
+    13
   );
 
   Selligent.displayLastReceivedRemotePushNotification(

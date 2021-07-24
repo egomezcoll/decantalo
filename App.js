@@ -27,7 +27,15 @@ export default function App() {
     (error) => { // error callback
     },
     true
-);
+  );
+  Selligent.enableInAppMessages(
+    (response) => { // success callback
+    },
+    (error) => { // error callback
+    },
+    false
+  );
+
   Selligent.displayLastReceivedRemotePushNotification(
     (response) => { // success callback
         alert(response);
@@ -38,17 +46,7 @@ Selligent.getLastRemotePushNotification(
       alert('last remote push notification -> '+response)
   }
 );
-Selligent.subscribeToEvents(
-  (response) => { // success callback
-      alert('Event recieved success '+response)
-  },
-  (error) => { // error callback
-      alert('Event error '+error)
-  },
-  (eventCallback) => {
-      alert('EVENT CALLBACK', eventCallback)
-  }
-);
+
 
 
     return (

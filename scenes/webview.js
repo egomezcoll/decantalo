@@ -26,6 +26,7 @@ I18n.translations = {
 
   function WebviewScreen({ route }) {
     const { email, password, languageCode, countryCode } = route.params;
+    I18n.locale = languageCode;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
     const [isNotificationsView , setIsNotificationsView] = useState(false);
     const [haveNotifications , setHaveNotifications] = useState(false);

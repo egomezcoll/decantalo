@@ -10,7 +10,7 @@ function RedirectScreen({ navigation }) {
        authenticationPrompt: 'auth with yourself',
        service: 'example',
      }
-     await SecureStorage.removeItem('email', config);
+     //await SecureStorage.removeItem('email', config);
 
      let email = await SecureStorage.getItem('email', config);
      if(email){

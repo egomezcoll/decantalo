@@ -25,7 +25,7 @@ I18n.translations = {
 };
 
   function WebviewScreen({ route }) {
-    const { email, password, languageCode, countryCode } = route.params;
+    const { email, password, languageCode, countryCode, initialUrl } = route.params;
     I18n.locale = languageCode;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
     const [isNotificationsView , setIsNotificationsView] = useState(false);
@@ -73,14 +73,22 @@ I18n.translations = {
           setIsNotificationsView(false);
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/contacta-con-decantalo`);
           break;  
-        case 'chat': 
+        case 'chat':
           setIsNotificationsView(false);
           this.webref.injectJavaScript(`
             document.getElementById('livechat-wrapper').click();
             true;
           `);
           break; 
-        
+        case 'deeplink':
+          setIsNotificationsView(false);
+          try{
+            let finalDeeplink = initialUrl.split('url=')[1];
+            finalDeeplink.includes('decantalo.com') ? setUrl(finalDeeplink) : changeWebviewURL('home');
+          }catch(error){
+            changeWebviewURL('home');
+          }
+          break; 
         default:
           setIsNotificationsView(false);
           setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);
@@ -93,7 +101,11 @@ I18n.translations = {
                 onLoadEnd={() => {
                   if(isFirstRenderTime){
                     setIsFirstRenderTime(false);
-                    changeWebviewURL('home');
+                    if(initialUrl){
+                      changeWebviewURL('deeplink')
+                    }else{
+                      changeWebviewURL('home');
+                    }
                   }
                 }}
                 source={{ uri: url}}

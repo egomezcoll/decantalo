@@ -22,7 +22,6 @@ const Stack = createStackNavigator();
 export default function App() {
   Selligent.enableNotifications(
     (response) => { // success callback
-      alert(response);
     },
     (error) => { // error callback
     },
@@ -36,7 +35,7 @@ export default function App() {
     13
   );
 
-  Selligent.displayLastReceivedRemotePushNotification(
+/*  Selligent.displayLastReceivedRemotePushNotification(
     (response) => { // success callback
         alert(response);
     }
@@ -45,7 +44,7 @@ Selligent.getLastRemotePushNotification(
   (response) => { // success callback
       alert('last remote push notification -> '+response)
   }
-);
+);*/
 
 
 

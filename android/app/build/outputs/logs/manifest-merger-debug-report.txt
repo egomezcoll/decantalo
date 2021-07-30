@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
-MERGED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
+INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
+MERGED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/1d5cb0e0dfce7769bc77134a9012d53a/jetified-flipper-0.75.1/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/6616d4af728bf2361f6a5675ff93bb9e/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/d381db1e61ec8a88cda7b1c0533f8282/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
@@ -110,13 +110,13 @@ INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/debu
 		INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
 		INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:2:3-49
 	android:versionCode
 		INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:1-36:12
 		INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -137,9 +137,9 @@ MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8e
 	android:name
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:7:5-28:19
-MERGED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:7:5-28:19
-MERGED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:7:5-28:19
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:7:5-35:19
+MERGED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:7:5-35:19
+MERGED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:7:5-35:19
 MERGED from [:react-native-splash-screen] /Users/edge/Development/aplicativos/Decantalo/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-12:19
 MERGED from [:react-native-splash-screen] /Users/edge/Development/aplicativos/Decantalo/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-12:19
 MERGED from [:react-native-webview] /Users/edge/Development/aplicativos/Decantalo/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
@@ -221,7 +221,7 @@ ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/An
 	android:name
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:15:5-79
 activity#com.decantalo.MainActivity
-ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:17:7-27:18
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:17:7-34:18
 	android:label
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:19:9-41
 	android:launchMode
@@ -232,16 +232,36 @@ ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/An
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:20:9-86
 	android:name
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:18:9-37
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:23:9-26:25
-action#android.intent.action.MAIN
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:goto+data:scheme:decantalo
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:23:9-29:25
+action#android.intent.action.VIEW
 ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:24:13-65
 	android:name
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:24:21-62
-category#android.intent.category.LAUNCHER
-ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:25:13-73
+category#android.intent.category.DEFAULT
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:25:13-72
 	android:name
-		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:25:23-70
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:25:23-69
+category#android.intent.category.BROWSABLE
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:26:13-74
+	android:name
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:26:23-71
+data
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:27:13-28:41
+	android:host
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:28:19-38
+	android:scheme
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:27:19-45
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:30:9-33:25
+action#android.intent.action.MAIN
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:31:13-65
+	android:name
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:31:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:32:13-73
+	android:name
+		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:32:23-70
 uses-sdk
 INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml

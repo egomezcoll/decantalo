@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Linking} from "react-native";
 import {
     Image,
     TouchableOpacity,
@@ -6,6 +7,7 @@ import {
     FlatList,
     Platform, Text
   } from "react-native";
+import Spinner from 'react-native-loading-spinner-overlay';
 import { WebView } from 'react-native-webview';
 import { styles } from "../App";
 import SplashScreen from 'react-native-splash-screen'
@@ -31,9 +33,15 @@ I18n.translations = {
     const [isNotificationsView , setIsNotificationsView] = useState(false);
     const [haveNotifications , setHaveNotifications] = useState(false);
     const [notificationsData, setNotificationsData] = useState([]);
+    const [urlEventListener, setUrlEventListener] = useState(null);
+    
+   
 
     useEffect(() => {
       SplashScreen.hide();
+      Linking.addEventListener('url', (event)=>{
+        setUrlEventListener(event.url);
+      });
       Selligent.getInAppMessages(
         (response) => { // success callback
           if(response.length === 0){
@@ -83,7 +91,7 @@ I18n.translations = {
         case 'deeplink':
           setIsNotificationsView(false);
           try{
-            let finalDeeplink = initialUrl.split('url=')[1];
+            let finalDeeplink = initialUrl ? initialUrl.split('url=')[1] : urlEventListener.split('url=')[1];
             finalDeeplink.includes('decantalo.com') ? setUrl(finalDeeplink) : changeWebviewURL('home');
           }catch(error){
             changeWebviewURL('home');
@@ -101,7 +109,7 @@ I18n.translations = {
                 onLoadEnd={() => {
                   if(isFirstRenderTime){
                     setIsFirstRenderTime(false);
-                    if(initialUrl){
+                    if(initialUrl || urlEventListener){
                       changeWebviewURL('deeplink')
                     }else{
                       changeWebviewURL('home');
@@ -112,6 +120,10 @@ I18n.translations = {
                 ref={(r) => (this.webref = r)}
               />
             </View>
+            <Spinner
+          visible={isFirstRenderTime}
+          textStyle={{color: '#FFF'}}
+        />
             <View style={{flex: isNotificationsView ? 5 : 0}}>
               <View style={styles.mainView}>
                 <View style={{flex: 1, alignItems: "center"}}>
@@ -122,7 +134,7 @@ I18n.translations = {
                 <View style={styles.containerList}>
                   { haveNotifications ? <FlatList
                     data={notificationsData}
-                    renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+                    renderItem={({item}) =>  <Text style={{alignItems:"center", marginBottom:20,paddingLeft:15, paddingRight:15}}><Text style={{marginRight:10}}>{"\uD83D\uDD14"}</Text><Text style={{fontWeight: 'bold'}}>{new Date(item.creationDate).toLocaleDateString("es-ES")} - {item.title}</Text>{"\n"}<Text style={{flex: 1, alignItems:'center', flexDirection: 'column'}}>{item.body}</Text></Text>}
                     ItemSeparatorComponent={renderSeparator = () => {  
                       return (  
                           <View  

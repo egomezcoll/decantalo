@@ -4,5 +4,6 @@
     "privateKey": "nXjg1xHoeWwmTDOxpxKuYLf3YqHSEnE3A/esOrAUlff4TY66phgZ0ivTpESOVAiZZmICr5/EoSDr3jYokD9WnA==",
     "fullyQualifiedNotificationActivityClassName":"com.decantalo.MainActivity",
     "notificationSmallIcon": "ic_notification",
-    "notificationLargeIcon": "ic_notification"
+    "notificationLargeIcon": "ic_notification",
+    "addInAppMessageFromPushToInAppMessageList": "true"
 }

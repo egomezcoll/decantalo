@@ -6,12 +6,9 @@ function RedirectScreen({ navigation }) {
   
   const checkHasLogin = async () => {
 
-      // Get the deep link used to open the app
-      const initialUrl = await Linking.getInitialURL();
-      alert('deeplink url ' + initialUrl);
-
-    
-
+    // Get the deep link used to open the app
+    const initialUrl = await Linking.getInitialURL();
+     
      const config = {
        accessible: ACCESSIBLE.WHEN_UNLOCKED,
        authenticationPrompt: 'auth with yourself',

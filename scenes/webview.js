@@ -5,7 +5,9 @@ import {
     TouchableOpacity,
     View,
     FlatList,
-    Platform, Text
+    Platform,
+    StatusBar, 
+    Text
   } from "react-native";
 import Spinner from 'react-native-loading-spinner-overlay';
 import { WebView } from 'react-native-webview';
@@ -27,7 +29,7 @@ I18n.translations = {
 };
 
   function WebviewScreen({ route }) {
-    const { email, password, languageCode, countryCode, initialUrl } = route.params;
+    const { email, password, languageCode, countryCode } = route.params;
     I18n.locale = languageCode;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
     const [isNotificationsView , setIsNotificationsView] = useState(false);
@@ -39,8 +41,25 @@ I18n.translations = {
 
     useEffect(() => {
       SplashScreen.hide();
+      
+      // Get the deep link used to open the app
+      Linking.getInitialURL().then((url) => {
+        alert('Initial url is: ' + url);
+        if(url){
+          alert('App Cerrada, navego a url');
+          setUrlEventListener(url);
+          changeWebviewURL('deeplink', url);
+        }
+
+      })
+      
       Linking.addEventListener('url', (event)=>{
-        setUrlEventListener(event.url);
+        alert('Event listener url: ' + event.url);
+        if(event.url){
+          alert('App abierta, navego a url');
+          setUrlEventListener(event.url);
+          changeWebviewURL('deeplink', event.url);
+        } 
       });
       Selligent.getInAppMessages(
         (response) => { // success callback
@@ -64,7 +83,7 @@ I18n.translations = {
     const loginActionTranslated = loginAction[languageCode];
     const [url, setUrl] = useState(`https://www.decantalo.com/${countryCode}/${languageCode}/${loginActionTranslated}?back=my-account&email=${email}&password=${password}&submitLogin=1`)
   
-    const changeWebviewURL = (section) => {
+    const changeWebviewURL = (section, url = null) => {
       switch(section){
         case 'home':
           setIsNotificationsView(false);
@@ -90,10 +109,15 @@ I18n.translations = {
           break; 
         case 'deeplink':
           setIsNotificationsView(false);
-          try{
-            let finalDeeplink = initialUrl ? initialUrl.split('url=')[1] : urlEventListener.split('url=')[1];
-            finalDeeplink.includes('decantalo.com') ? setUrl(finalDeeplink) : changeWebviewURL('home');
-          }catch(error){
+          if(url){
+            try{
+              //let finalDeeplink = initialUrl ? initialUrl.split('url=')[1] : urlEventListener.split('url=')[1];
+              let finalDeeplink = url.split('url=')[1];
+              finalDeeplink.includes('decantalo.com') ? setUrl(finalDeeplink) : changeWebviewURL('home');
+            }catch(error){
+              changeWebviewURL('home');
+            }
+          }else{
             changeWebviewURL('home');
           }
           break; 
@@ -103,18 +127,15 @@ I18n.translations = {
       }
     };
     return (
-      <View style={{flex: 1, backgroundColor:"#393939"}}>
+      <View style={{flex: 1, backgroundColor:"#f8f8f8"}}>
           <View style={{flex: isNotificationsView ? 0 : 5}}>
-            <WebView style={ isFirstRenderTime ? {width:'none'} : {display:'flex'},{marginTop: Platform.OS === 'ios' ? 40 : 0}}
+            <StatusBar hidden={true} />
+            <WebView style={ isFirstRenderTime ? {width:'none'} : {display:'flex'},{marginTop: Platform.OS === 'ios' ? 30 : 0}}
                 onLoadEnd={() => {
-                  if(isFirstRenderTime){
-                    setIsFirstRenderTime(false);
-                    if(initialUrl || urlEventListener){
-                      changeWebviewURL('deeplink')
-                    }else{
-                      changeWebviewURL('home');
-                    }
+                  if(isFirstRenderTime && !urlEventListener){
+                    changeWebviewURL('home');
                   }
+                  setIsFirstRenderTime(false);
                 }}
                 source={{ uri: url}}
                 ref={(r) => (this.webref = r)}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Linking} from "react-native";
+//import { Linking} from "react-native";
 import SecureStorage, { ACCESSIBLE } from 'react-native-secure-storage'
 
 function RedirectScreen({ navigation }) {
@@ -7,7 +7,7 @@ function RedirectScreen({ navigation }) {
   const checkHasLogin = async () => {
 
     // Get the deep link used to open the app
-    const initialUrl = await Linking.getInitialURL();
+    //const initialUrl = await Linking.getInitialURL();
      
      const config = {
        accessible: ACCESSIBLE.WHEN_UNLOCKED,
@@ -26,7 +26,7 @@ function RedirectScreen({ navigation }) {
           password: password,
           languageCode: languageCode,
           countryCode: countryCode,
-          initialUrl: initialUrl,
+          initialUrl: null,
        });
      }else {
         navigation.navigate('Language');

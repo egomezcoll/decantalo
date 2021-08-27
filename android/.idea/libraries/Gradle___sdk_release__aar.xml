@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: :sdk-release:@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8e69ec813ee7849129c4154294dd3070/jetified-sdk-release/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8e69ec813ee7849129c4154294dd3070/jetified-sdk-release/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8e69ec813ee7849129c4154294dd3070/jetified-sdk-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

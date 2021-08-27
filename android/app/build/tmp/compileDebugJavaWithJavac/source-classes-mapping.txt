@@ -6,9 +6,9 @@ com/decantalo/ReactNativeFlipper.java
  com.decantalo.ReactNativeFlipper$1
  com.decantalo.ReactNativeFlipper$2
  com.decantalo.ReactNativeFlipper$2$1
-com/decantalo/MainActivity.java
- com.decantalo.MainActivity
-com/decantalo/BuildConfig.java
- com.decantalo.BuildConfig
 com/facebook/react/PackageList.java
  com.facebook.react.PackageList
+com/decantalo/BuildConfig.java
+ com.decantalo.BuildConfig
+com/decantalo/MainActivity.java
+ com.decantalo.MainActivity

@@ -42,6 +42,30 @@ I18n.translations = {
     useEffect(() => {
       SplashScreen.hide();
       
+      
+      Linking.getInitialURL().then((url) => {
+        if(url){
+          setUrlEventListener(url);
+          setTimeout(()=>{
+            changeWebviewURL('deeplink', url);
+          },2000);
+        }
+      })
+      
+      
+      
+      Linking.addEventListener('url', (event)=>{
+        //alert('1 Event listener url: ' + event.url);
+        setTimeout(()=>{
+          if(event.url){
+            //alert('App abierta, navego a url');
+            setUrlEventListener(event.url);
+            changeWebviewURL('deeplink', event.url);
+          } 
+        },2000);
+      });
+      
+      /*
       // Get the deep link used to open the app
       Linking.getInitialURL().then((url) => {
         alert('Initial url is: ' + url);
@@ -61,6 +85,9 @@ I18n.translations = {
           changeWebviewURL('deeplink', event.url);
         } 
       });
+
+      */
+
       Selligent.getInAppMessages(
         (response) => { // success callback
           if(response.length === 0){
@@ -83,7 +110,7 @@ I18n.translations = {
     const loginActionTranslated = loginAction[languageCode];
     const [url, setUrl] = useState(`https://www.decantalo.com/${countryCode}/${languageCode}/${loginActionTranslated}?back=my-account&email=${email}&password=${password}&submitLogin=1`)
   
-    const changeWebviewURL = (section, url = null) => {
+    const changeWebviewURL = (section, url) => {
       switch(section){
         case 'home':
           setIsNotificationsView(false);
@@ -109,17 +136,38 @@ I18n.translations = {
           break; 
         case 'deeplink':
           setIsNotificationsView(false);
+          //alert('2 changeViewURL ' + url);
+          
+          let finalDeeplink = url.split('url=')[1];
+          //alert('3 FINAL DEEPLINK' + finalDeeplink);
+          //setUrl(finalDeeplink);
+          this.webref.injectJavaScript(`
+            window.location.href = '${finalDeeplink}';
+            true;
+          `);
+          /*
+          try{
+            let finalDeeplink = url.split('url=')[1];
+            alert('FINAL DEEPLINK' + finalDeeplink);
+            setUrl(finalDeeplink);
+          }catch(error){
+            alert('Error DeepLink')
+            changeWebviewURL('home');
+          }
+          */
+          /*
           if(url){
             try{
-              //let finalDeeplink = initialUrl ? initialUrl.split('url=')[1] : urlEventListener.split('url=')[1];
               let finalDeeplink = url.split('url=')[1];
-              finalDeeplink.includes('decantalo.com') ? setUrl(finalDeeplink) : changeWebviewURL('home');
+              alert('FINAL DEEPLINK' + finalDeeplink);
+              setUrl(finalDeeplink);
             }catch(error){
               changeWebviewURL('home');
             }
           }else{
             changeWebviewURL('home');
           }
+          */
           break; 
         default:
           setIsNotificationsView(false);
@@ -131,14 +179,14 @@ I18n.translations = {
           <View style={{flex: isNotificationsView ? 0 : 5}}>
             <StatusBar hidden={true} />
             <WebView style={ isFirstRenderTime ? {width:'none'} : {display:'flex'},{marginTop: Platform.OS === 'ios' ? 30 : 0}}
-                onLoadEnd={() => {
-                  if(isFirstRenderTime && !urlEventListener){
-                    changeWebviewURL('home');
-                  }
-                  setIsFirstRenderTime(false);
-                }}
-                source={{ uri: url}}
-                ref={(r) => (this.webref = r)}
+              onLoadStart={() => {
+                if(isFirstRenderTime && !urlEventListener) {
+                  changeWebviewURL('home');
+                }
+                setIsFirstRenderTime(false);
+              }}
+              source={{ uri: url}}
+              ref={(r) => (this.webref = r)}
               />
             </View>
             <Spinner
@@ -184,4 +232,3 @@ I18n.translations = {
   }
 
   export default WebviewScreen;
-  

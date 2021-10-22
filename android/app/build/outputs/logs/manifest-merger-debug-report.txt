@@ -119,7 +119,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/edge/.gradle/cache
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/8fe5fa6a47c6352bc1603e17010dcd11/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/3134b5dfd653e2a09c7ec919ffcd78cd/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [cn.aigestudio.wheelpicker:WheelPicker:1.0.3] /Users/edge/.gradle/caches/transforms-2/files-2.1/db0d5ff99d7f6ff5d7bde9ae451bf184/jetified-WheelPicker-1.0.3/AndroidManifest.xml:2:1-12:12
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:2:1-82:12
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:2:1-83:12
 MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/edge/.gradle/caches/transforms-2/files-2.1/ab7c12be6d262c0c99fc2ba1fe5cca95/jetified-conceal-1.1.3/AndroidManifest.xml:7:1-16:12
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/7ce844e7226365ed16888bc620893dbd/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/1dc62d2ade5f7b547e1b517603c71057/jetified-ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -174,8 +174,8 @@ MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/edge/.grad
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/ca65983f256250f05af6888c6e3e715a/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cb556651a5832284b6cfd8ad252998f3/jetified-play-services-measurement-sdk-api-17.2.1/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cb556651a5832284b6cfd8ad252998f3/jetified-play-services-measurement-sdk-api-17.2.1/AndroidManifest.xml:23:5-67
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:11:5-67
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:11:5-67
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:11:5-67
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from /Users/edge/Development/aplicativos/Decantalo/android/app/src/main/AndroidManifest.xml:5:22-64
 application
@@ -274,8 +274,8 @@ MERGED from [androidx.core:core:1.1.0] /Users/edge/.gradle/caches/transforms-2/f
 MERGED from [androidx.core:core:1.1.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/eb4982f4874c129102a9f0bda9cbbf77/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/bd29b0d260373b98cd2cd4a295f057ea/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/bd29b0d260373b98cd2cd4a295f057ea/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:21:5-80:19
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:21:5-80:19
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:21:5-81:19
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:21:5-81:19
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/eb4982f4874c129102a9f0bda9cbbf77/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
@@ -583,8 +583,8 @@ MERGED from [androidx.print:print:1.0.0] /Users/edge/.gradle/caches/transforms-2
 MERGED from [androidx.print:print:1.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/3134b5dfd653e2a09c7ec919ffcd78cd/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [cn.aigestudio.wheelpicker:WheelPicker:1.0.3] /Users/edge/.gradle/caches/transforms-2/files-2.1/db0d5ff99d7f6ff5d7bde9ae451bf184/jetified-WheelPicker-1.0.3/AndroidManifest.xml:8:5-10:41
 MERGED from [cn.aigestudio.wheelpicker:WheelPicker:1.0.3] /Users/edge/.gradle/caches/transforms-2/files-2.1/db0d5ff99d7f6ff5d7bde9ae451bf184/jetified-WheelPicker-1.0.3/AndroidManifest.xml:8:5-10:41
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:5:5-7:41
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:5:5-7:41
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:5:5-7:41
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/edge/.gradle/caches/transforms-2/files-2.1/ab7c12be6d262c0c99fc2ba1fe5cca95/jetified-conceal-1.1.3/AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/edge/.gradle/caches/transforms-2/files-2.1/ab7c12be6d262c0c99fc2ba1fe5cca95/jetified-conceal-1.1.3/AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/7ce844e7226365ed16888bc620893dbd/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
@@ -679,8 +679,8 @@ MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/edge/.grad
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/ca65983f256250f05af6888c6e3e715a/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cb556651a5832284b6cfd8ad252998f3/jetified-play-services-measurement-sdk-api-17.2.1/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cb556651a5832284b6cfd8ad252998f3/jetified-play-services-measurement-sdk-api-17.2.1/AndroidManifest.xml:24:5-79
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:10:5-79
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:10:5-79
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:10:5-79
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:10:5-79
 	android:name
 		ADDED from [com.plotprojects:plot-android:3.13.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cae49590ef54f33b551f2594a19a8833/jetified-plot-android-3.13.1/AndroidManifest.xml:23:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -727,8 +727,8 @@ uses-permission#android.permission.FOREGROUND_SERVICE
 ADDED from [com.plotprojects:plot-android:3.13.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cae49590ef54f33b551f2594a19a8833/jetified-plot-android-3.13.1/AndroidManifest.xml:31:5-77
 MERGED from [androidx.work:work-runtime:2.4.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/dc06e3a953901e4d864092494480d5ea/work-runtime-2.4.0/AndroidManifest.xml:28:5-77
 MERGED from [androidx.work:work-runtime:2.4.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/dc06e3a953901e4d864092494480d5ea/work-runtime-2.4.0/AndroidManifest.xml:28:5-77
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:12:5-77
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:12:5-77
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:12:5-77
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:12:5-77
 	android:name
 		ADDED from [com.plotprojects:plot-android:3.13.1] /Users/edge/.gradle/caches/transforms-2/files-2.1/cae49590ef54f33b551f2594a19a8833/jetified-plot-android-3.13.1/AndroidManifest.xml:31:22-74
 uses-permission#android.permission.ACTIVITY_RECOGNITION
@@ -1279,8 +1279,8 @@ ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/edge/.gradle/cach
 		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/6fe7e9259a1dd8864cb492ad61816b31/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/ca65983f256250f05af6888c6e3e715a/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:17:5-19:35
-MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:17:5-19:35
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:17:5-19:35
+MERGED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:17:5-19:35
 	android:glEsVersion
 		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/edge/.gradle/caches/transforms-2/files-2.1/ca65983f256250f05af6888c6e3e715a/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
 	android:required
@@ -1314,98 +1314,100 @@ ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] /Users/edge/.gradle/cache
 	android:name
 		ADDED from [com.firebase:firebase-jobdispatcher:0.8.5] /Users/edge/.gradle/caches/transforms-2/files-2.1/f49c33a0ec383aa21926286b595e6b9a/jetified-firebase-jobdispatcher-0.8.5/AndroidManifest.xml:33:13-73
 permission#android.permission.MEDIA_CONTENT_CONTROL
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:14:5-75
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:14:5-75
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:14:17-72
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:14:17-72
 service#com.selligent.sdk.SMMessagingService
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:29:9-35:19
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:29:9-35:19
 	android:exported
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:31:13-37
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:30:13-64
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:30:13-64
 service#com.selligent.sdk.SMMediaPlayerService
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:36:9-39:19
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:36:9-39:19
 	android:exported
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:38:13-37
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:37:13-66
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:37:13-66
 receiver#com.selligent.sdk.SMPlotNotificationFilter
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:41:9-47:20
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:41:9-47:20
 	android:exported
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:43:13-37
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:42:13-70
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:42:13-70
 intent-filter#action:name:${applicationId}.plot.FilterNotifications
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:44:13-46:29
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:44:13-46:29
 intent-filter#action:name:com.decantalo.plot.FilterNotifications
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:44:13-46:29
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:44:13-46:29
 action#${applicationId}.plot.FilterNotifications
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:45:17-84
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:45:17-84
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:45:25-81
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:45:25-81
 action#com.decantalo.plot.FilterNotifications
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:45:17-84
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:45:17-84
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:45:25-81
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:45:25-81
 receiver#com.selligent.sdk.SMPlotNotificationEventReceiver
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:48:9-55:20
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:48:9-55:20
 	android:exported
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:50:13-37
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:49:13-77
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:49:13-77
 intent-filter#action:name:${applicationId}.plot.OpenedNotification+action:name:${applicationId}.plot.SentNotification
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:51:13-54:29
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:51:13-54:29
 intent-filter#action:name:com.decantalo.plot.OpenedNotification+action:name:com.decantalo.plot.SentNotification
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:51:13-54:29
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:51:13-54:29
 action#${applicationId}.plot.SentNotification
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:52:17-81
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:52:17-81
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:52:25-78
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:52:25-78
 action#com.decantalo.plot.SentNotification
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:52:17-81
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:52:17-81
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:52:25-78
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:52:25-78
 action#${applicationId}.plot.OpenedNotification
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:53:17-83
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:53:17-83
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:53:25-80
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:53:25-80
 action#com.decantalo.plot.OpenedNotification
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:53:17-83
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:53:17-83
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:53:25-80
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:53:25-80
 receiver#com.selligent.sdk.SMBackgroundGcmBroadcastReceiver
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:56:9-65:20
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:56:9-66:20
+	android:exported
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:58:13-36
 	android:permission
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:58:13-73
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:59:13-73
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:57:13-78
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:57:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.android.c2dm.intent.REGISTRATION+category:name:com.selligent.sdk
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:59:13-64:29
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:60:13-65:29
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:61:17-86
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:62:17-86
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:61:25-83
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:62:25-83
 category#com.selligent.sdk
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:63:17-62
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:64:17-62
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:63:27-59
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:64:27-59
 activity#com.selligent.sdk.SMNotificationActivity
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:67:9-70:20
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:68:9-71:20
 	android:label
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:69:13-64
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:70:13-64
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:68:13-68
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:69:13-68
 activity#com.selligent.sdk.SMViewActivity
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:71:9-75:20
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:72:9-76:20
 	android:label
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:74:13-56
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:75:13-56
 	android:configChanges
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:73:13-83
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:74:13-83
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:72:13-60
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:73:13-60
 activity#com.selligent.sdk.SMMapActivity
-ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:76:9-79:20
+ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:77:9-80:20
 	android:label
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:78:13-55
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:79:13-55
 	android:name
-		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/7aa655d5011889ec6ad4384ee5173b9a/jetified-sdk-release/AndroidManifest.xml:77:13-59
+		ADDED from [:sdk-release:] /Users/edge/.gradle/caches/transforms-2/files-2.1/8b68c6ca57dae3a4f884215bebf503de/jetified-sdk-release/AndroidManifest.xml:78:13-59

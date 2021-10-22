@@ -35,19 +35,6 @@ export default function App() {
     12
   );
 
-/*  Selligent.displayLastReceivedRemotePushNotification(
-    (response) => { // success callback
-        alert(response);
-    }
-);
-Selligent.getLastRemotePushNotification(
-  (response) => { // success callback
-      alert('last remote push notification -> '+response)
-  }
-);*/
-
-
-
     return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>

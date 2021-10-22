@@ -42,7 +42,6 @@ I18n.translations = {
     useEffect(() => {
       SplashScreen.hide();
       
-      
       Linking.getInitialURL().then((url) => {
         if(url){
           setUrlEventListener(url);
@@ -50,43 +49,17 @@ I18n.translations = {
             changeWebviewURL('deeplink', url);
           },2000);
         }
-      })
-      
-      
+      }) 
       
       Linking.addEventListener('url', (event)=>{
-        //alert('1 Event listener url: ' + event.url);
         setTimeout(()=>{
           if(event.url){
-            //alert('App abierta, navego a url');
             setUrlEventListener(event.url);
             changeWebviewURL('deeplink', event.url);
           } 
         },2000);
       });
-      
-      /*
-      // Get the deep link used to open the app
-      Linking.getInitialURL().then((url) => {
-        alert('Initial url is: ' + url);
-        if(url){
-          alert('App Cerrada, navego a url');
-          setUrlEventListener(url);
-          changeWebviewURL('deeplink', url);
-        }
-
-      })
-      
-      Linking.addEventListener('url', (event)=>{
-        alert('Event listener url: ' + event.url);
-        if(event.url){
-          alert('App abierta, navego a url');
-          setUrlEventListener(event.url);
-          changeWebviewURL('deeplink', event.url);
-        } 
-      });
-
-      */
+    
 
       Selligent.getInAppMessages(
         (response) => { // success callback
@@ -135,39 +108,12 @@ I18n.translations = {
           `);
           break; 
         case 'deeplink':
-          setIsNotificationsView(false);
-          //alert('2 changeViewURL ' + url);
-          
+          setIsNotificationsView(false);          
           let finalDeeplink = url.split('url=')[1];
-          //alert('3 FINAL DEEPLINK' + finalDeeplink);
-          //setUrl(finalDeeplink);
           this.webref.injectJavaScript(`
             window.location.href = '${finalDeeplink}';
             true;
           `);
-          /*
-          try{
-            let finalDeeplink = url.split('url=')[1];
-            alert('FINAL DEEPLINK' + finalDeeplink);
-            setUrl(finalDeeplink);
-          }catch(error){
-            alert('Error DeepLink')
-            changeWebviewURL('home');
-          }
-          */
-          /*
-          if(url){
-            try{
-              let finalDeeplink = url.split('url=')[1];
-              alert('FINAL DEEPLINK' + finalDeeplink);
-              setUrl(finalDeeplink);
-            }catch(error){
-              changeWebviewURL('home');
-            }
-          }else{
-            changeWebviewURL('home');
-          }
-          */
           break; 
         default:
           setIsNotificationsView(false);

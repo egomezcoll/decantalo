@@ -3,7 +3,7 @@
   "authors": {
     "AppFoundry": "info@appfoundry.be"
   },
-  "version": "2.5.0",
+  "version": "2.6.0",
   "summary": "React Native bridge for Selligent SDK",
   "description": "RNSelligent",
   "homepage": "https://github.com/SelligentMarketingCloud/MobileSDK-ReactNative",
@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/SelligentMarketingCloud/MobileSDK-ReactNative.git",
-    "tag": "2.5.0"
+    "tag": "2.6.0"
   },
   "source_files": "ios/**/*.{h,m}",
   "requires_arc": true,
-  "vendored_libraries": "ios/libSelligentMobile2.6.1.a",
-  "libraries": "SelligentMobile2.6.1",
+  "vendored_libraries": "ios/libSelligentMobile2.7.a",
+  "libraries": "SelligentMobile2.7",
   "dependencies": {
     "React": [
 

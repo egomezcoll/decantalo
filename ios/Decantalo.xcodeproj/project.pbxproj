@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7E3B2A30263B4B560073D845 /* selligent.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B2A2F263B4B560073D845 /* selligent.json */; };
+		7E9EA9A927216D3F00DA1A03 /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EA9A827216D3F00DA1A03 /* Void.swift */; };
 		7EFA019E4EEEFFBDBBB59A4B /* libPods-Decantalo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED097C317A6C8B3D3684267A /* libPods-Decantalo.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FDF7D7216040183409D07E30 /* libPods-Decantalo-DecantaloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E310D9567D6DFCE3FB0E0F7 /* libPods-Decantalo-DecantaloTests.a */; };
@@ -43,6 +44,8 @@
 		5E310D9567D6DFCE3FB0E0F7 /* libPods-Decantalo-DecantaloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Decantalo-DecantaloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2C5FA8269DAB7600AEFDD1 /* Decantalo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Decantalo.entitlements; path = Decantalo/Decantalo.entitlements; sourceTree = "<group>"; };
 		7E3B2A2F263B4B560073D845 /* selligent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = selligent.json; path = ../selligent.json; sourceTree = "<group>"; };
+		7E9EA9A727216D3F00DA1A03 /* Decantalo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Decantalo-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E9EA9A827216D3F00DA1A03 /* Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Void.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Decantalo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9058F265F2E432B770EC16C4 /* Pods-Decantalo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decantalo.debug.xcconfig"; path = "Target Support Files/Pods-Decantalo/Pods-Decantalo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED097C317A6C8B3D3684267A /* libPods-Decantalo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Decantalo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +99,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				7E9EA9A827216D3F00DA1A03 /* Void.swift */,
+				7E9EA9A727216D3F00DA1A03 /* Decantalo-Bridging-Header.h */,
 			);
 			name = Decantalo;
 			sourceTree = "<group>";
@@ -212,7 +217,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -418,6 +423,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				7E9EA9A927216D3F00DA1A03 /* Void.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 331CFABC3C4F99C3FD482E0A /* Pods-Decantalo-DecantaloTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -463,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02A285110C4467BED5F5C347 /* Pods-Decantalo-DecantaloTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = DecantaloTests/Info.plist;
@@ -551,7 +559,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.12;
+				MARKETING_VERSION = 2.0.14;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -559,6 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WQX5J2Z6W8.com.reskyt.decantaloes;
 				PRODUCT_NAME = Decantalo;
+				SWIFT_OBJC_BRIDGING_HEADER = "Decantalo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -633,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.12;
+				MARKETING_VERSION = 2.0.14;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -641,6 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.reskyt.decantaloes;
 				PRODUCT_NAME = Decantalo;
+				SWIFT_OBJC_BRIDGING_HEADER = "Decantalo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -696,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -755,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

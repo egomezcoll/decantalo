@@ -61,7 +61,7 @@ function countryScreen({ navigation, route }) {
             'type': SelligentConstants.EventType.USER_REGISTER, // specific event
             'data': { // optional
                 description: "User Register Event",
-                language: languageCode,
+                language: languageCode.toUpperCase(),
                 country: itemList[selectedItem].code,
             },
             'email': email, // required

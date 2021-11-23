@@ -28,7 +28,7 @@ I18n.translations = {
   es
 };
 
-  function WebviewScreen({ route }) {
+  function WebviewScreen({ navigation, route }) {
     const { email, password, languageCode, countryCode } = route.params;
     I18n.locale = languageCode;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
@@ -127,9 +127,14 @@ I18n.translations = {
             <WebView style={ isFirstRenderTime ? {width:'none'} : {display:'flex'},{marginTop: Platform.OS === 'ios' ? 30 : 0}}
               onLoadStart={() => {
                 if(isFirstRenderTime && !urlEventListener) {
-                  changeWebviewURL('home');
+                  setTimeout(()=>{ changeWebviewURL('home'); },1000);
                 }
                 setIsFirstRenderTime(false);
+              }}
+              onNavigationStateChange={(navState) => {
+                if(navState.url && navState.url.includes('mylogout')){
+                  navigation.navigate('Login', {'languageCode':languageCode})
+                };
               }}
               source={{ uri: url}}
               ref={(r) => (this.webref = r)}

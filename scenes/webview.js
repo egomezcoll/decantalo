@@ -131,6 +131,25 @@ I18n.translations = {
                 }
                 setIsFirstRenderTime(false);
               }}
+              onLoadEnd={() => {
+                this.webref.injectJavaScript(`
+                  document
+                  .querySelector('body')
+                  .addEventListener('click', interceptAnchorClickEvent);
+                  function interceptAnchorClickEvent(evt) {
+                    var target = evt.target;
+                    if (
+                      target.tagName === 'A' && target.getAttribute('href')
+                    ) {
+                      
+                      if(target.getAttribute('href').includes('mylogout')){
+                        window.location.href = target.getAttribute('href');
+                      }
+                    }
+                  };
+                  true;
+                `);
+              }}
               onNavigationStateChange={(navState) => {
                 if(navState.url && navState.url.includes('mylogout')){
                   navigation.navigate('Login', {'languageCode':languageCode})

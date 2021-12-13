@@ -9,6 +9,7 @@ import {
     StatusBar, 
     Text
   } from "react-native";
+import SecureStorage, { ACCESSIBLE } from 'react-native-secure-storage'
 import Spinner from 'react-native-loading-spinner-overlay';
 import { WebView } from 'react-native-webview';
 import { styles } from "../App";
@@ -73,6 +74,15 @@ I18n.translations = {
     );
     }, []);
     
+    const resetToLogin = async()=>{
+      const config = {
+        accessible: ACCESSIBLE.WHEN_UNLOCKED,
+        authenticationPrompt: 'auth with yourself',
+        service: 'example',
+      }
+      await SecureStorage.removeItem('email', config);
+      navigation.navigate('Login', {'languageCode':languageCode})
+    }
     const loginAction = {
         'es': 'iniciar-sesion',
         'ca': 'inici-sessio',
@@ -152,7 +162,7 @@ I18n.translations = {
               }}
               onNavigationStateChange={(navState) => {
                 if(navState.url && navState.url.includes('mylogout')){
-                  navigation.navigate('Login', {'languageCode':languageCode})
+                  resetToLogin();
                 };
               }}
               source={{ uri: url}}

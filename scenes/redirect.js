@@ -13,9 +13,9 @@ function RedirectScreen({ navigation }) {
      //await SecureStorage.removeItem('email', config);
 
      let email = await SecureStorage.getItem('email', config);
+     let languageCode = await SecureStorage.getItem('languageCode', config);
      if(email){
        let password = await SecureStorage.getItem('password', config);
-       let languageCode = await SecureStorage.getItem('languageCode', config);
        let countryCode = await SecureStorage.getItem('countryCode', config);
        navigation.navigate('Webview', {
           email: email,
@@ -24,7 +24,11 @@ function RedirectScreen({ navigation }) {
           countryCode: countryCode,
        });
      }else {
-        navigation.navigate('Language');
+        if(languageCode){
+          navigation.navigate('Login', {languageCode: languageCode})
+        }else{
+          navigation.navigate('Language');
+        }
      }
    };
    checkHasLogin();

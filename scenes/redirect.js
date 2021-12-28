@@ -11,6 +11,7 @@ function RedirectScreen({ navigation }) {
        service: 'example',
      }
      //await SecureStorage.removeItem('email', config);
+     //await SecureStorage.removeItem('languageCode', config);
 
      let email = await SecureStorage.getItem('email', config);
      let languageCode = await SecureStorage.getItem('languageCode', config);
@@ -24,11 +25,7 @@ function RedirectScreen({ navigation }) {
           countryCode: countryCode,
        });
      }else {
-        if(languageCode){
-          navigation.navigate('Login', {languageCode: languageCode})
-        }else{
-          navigation.navigate('Language');
-        }
+      navigation.navigate('Language');
      }
    };
    checkHasLogin();

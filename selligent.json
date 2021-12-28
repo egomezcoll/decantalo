@@ -2,7 +2,7 @@
     "url": "https://mobile.slgnt.eu/MobilePush/api/",
     "clientId": "432410da-8839-4f54-82d1-da44e6705d66",
     "privateKey": "nXjg1xHoeWwmTDOxpxKuYLf3YqHSEnE3A/esOrAUlff4TY66phgZ0ivTpESOVAiZZmICr5/EoSDr3jYokD9WnA==",
-    "fullyQualifiedNotificationActivityClassName":"com.decantalo.MainActivity",
+    "fullyQualifiedNotificationActivityClassName":"com.lluraferi.decantaloes.MainActivity",
     "notificationSmallIcon": "ic_notification",
     "notificationLargeIcon": "ic_notification",
     "addInAppMessageFromPushToInAppMessageList": "true"

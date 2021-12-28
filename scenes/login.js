@@ -8,6 +8,9 @@ import {
     TextInput,
     TouchableOpacity
   } from "react-native";
+import SecureStorage, { ACCESSIBLE } from 'react-native-secure-storage';
+import Selligent from '@selligent-marketing-cloud/selligent-react-native' // Add Selligent import
+import SelligentConstants from '@selligent-marketing-cloud/selligent-react-native/constants';
 import I18n from 'react-native-i18n';
 import en from './i18n/en';
 import fr from './i18n/fr';
@@ -33,6 +36,47 @@ function LoginScreen({ navigation, route }) {
     const isValidEmail = () => {
       let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
       return reg.test(email);
+    }
+    const config = {
+      accessible: ACCESSIBLE.WHEN_UNLOCKED,
+      authenticationPrompt: 'auth with yourself',
+      service: 'example',
+    };
+    const checkCountryStep = async(email, password)=>{
+      const countryCode = await SecureStorage.getItem('countryCode', config);
+      if(countryCode){
+        await Selligent.sendEvent(
+          (response) => { // success callback
+          },
+          (error) => { // error callback
+          },
+          {
+              'type': SelligentConstants.EventType.USER_REGISTER, // specific event
+              'data': { // optional
+                  description: "User Register Event",
+                  language: languageCode.toUpperCase(),
+                  country: countryCode,
+              },
+              'email': email, // required
+          }
+        );
+        await SecureStorage.setItem('email', email, config);
+        await SecureStorage.setItem('password', password, config);
+          navigation.navigate('Webview', {
+            countryCode: countryCode,
+            email: email,
+            password: password,
+            languageCode: languageCode,
+            loginAccess: true,
+          });
+        
+      } else {
+        navigation.navigate('Country', {
+          email: email,
+          password: password,
+          languageCode: languageCode
+        }); 
+      }
     }
     const showLoginError = (loginErrorText) => {
       setLoginError(loginErrorText);
@@ -82,11 +126,7 @@ function LoginScreen({ navigation, route }) {
 
       fetch(`https://www.decantalo.com/${path}?back=my-account&email=${email}&password=${password}&submitLogin=1`)
       .then((resp)=>{ return resp.text() }).then((text)=>{ 
-        text.includes('js-invalid-feedback-browser') ? showLoginError(loginErrorText): navigation.navigate('Country', {
-          email: email,
-          password: password,
-          languageCode: languageCode
-        }) 
+        text.includes('js-invalid-feedback-browser') ? showLoginError(loginErrorText): checkCountryStep(email, password);
       })
         .catch((error) => {
           console.error(error);

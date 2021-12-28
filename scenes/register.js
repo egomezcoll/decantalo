@@ -8,6 +8,7 @@ import {
   } from "react-native";
 import { styles } from "./../App";
 import I18n from 'react-native-i18n';
+import SecureStorage, { ACCESSIBLE } from 'react-native-secure-storage';
 import en from './i18n/en';
 import fr from './i18n/fr';
 import de from './i18n/de';
@@ -24,7 +25,25 @@ I18n.translations = {
 
 function RegisterScreen({ navigation, route }) {
     const { languageCode } = route.params;
+    const config = {
+      accessible: ACCESSIBLE.WHEN_UNLOCKED,
+      authenticationPrompt: 'auth with yourself',
+      service: 'example',
+    };
     I18n.locale = languageCode;
+    const loadWebviewWithoutLogin = async()=>{
+      const hasCountry = await SecureStorage.getItem('countryCode', config);
+      
+      !hasCountry ? 
+        navigation.navigate('Country', {languageCode: languageCode, email: null, password: null}) :
+        navigation.navigate('Webview', {
+          countryCode: hasCountry,
+          email: null,
+          password: null,
+          languageCode: languageCode,
+          freeAccess: true,
+        })
+    }
     return (
       <View style={styles.mainView}>
           <View style={{flex: 4, alignItems: "center"}}>
@@ -48,7 +67,15 @@ function RegisterScreen({ navigation, route }) {
                   {I18n.t('REGISTRO_NEW_USER')}
                 </Text>
               </TouchableOpacity>
+            </View>
+            <View style={styles.linkView}>
+              <View style={styles.linkline}></View>
             </View> 
+            <View style={styles.linkView}>
+              <TouchableOpacity onPress={() => loadWebviewWithoutLogin()}>
+                <Text style={styles.linkDecoration}>{I18n.t('CONTINUE_WITHOUT_LOGIN')}</Text>
+              </TouchableOpacity>
+            </View>
           </View>
           <View style={{flex: 1}}></View>  
       </View>  

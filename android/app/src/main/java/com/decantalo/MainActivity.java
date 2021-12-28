@@ -1,4 +1,4 @@
-package com.decantalo;
+package com.lluraferi.decantaloes;
 
 import android.os.Bundle; // here
 import com.facebook.react.ReactActivity;

@@ -15,4 +15,5 @@ export default {
     NOT_HAVE_ACCOUNT: "Sie haben noch kein Konto bei Decántalo?",
     SIGNUP_LINK: "Erstellen Sie es hier",
     NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
+    CONTINUE_WITHOUT_LOGIN:"Continuar sense Login",
 };

@@ -20,4 +20,5 @@ export default {
     FORGOT_INSTRUCTION:"Introduce la cuenta de mail que utilizaste para registrarte en Decántalo y te enviaremos un mail para que puedas crear una nueva.",
     FORGOT_ENVIAR:"ENVIAR MAIL RECUPERACIÓN CONTRASEÑA",
     NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
+    CONTINUE_WITHOUT_LOGIN:"Continuar sin Login",
 };

@@ -1,4 +1,4 @@
-package com.decantalo;
+package com.lluraferi.decantaloes;
 
 import com.reactnativecommunity.picker.RNCPickerPackage;
 import android.app.Application;
@@ -75,7 +75,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.decantalo.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.lluraferi.decantaloes.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Linking} from "react-native";
+import { Linking, Dimensions } from "react-native";
 import {
     Image,
     TouchableOpacity,
@@ -30,16 +30,54 @@ I18n.translations = {
 };
 
   function WebviewScreen({ navigation, route }) {
-    const { email, password, languageCode, countryCode } = route.params;
-    I18n.locale = languageCode;
+    const { email, password, languageCode, countryCode, loginAccess } = route.params;
     const [isFirstRenderTime , setIsFirstRenderTime] = useState(true);
     const [isNotificationsView , setIsNotificationsView] = useState(false);
     const [haveNotifications , setHaveNotifications] = useState(false);
     const [notificationsData, setNotificationsData] = useState([]);
     const [urlEventListener, setUrlEventListener] = useState(null);
-    
-   
+    const [_languageCode, setlanguageCode] = useState(languageCode);
+    const [_countryCode, setcountryCode] = useState(countryCode);
+    I18n.locale = _languageCode;
+    const [win, setOrientation] = useState(Dimensions.get('window').width);
+    const loginAction = {
+      'es': 'iniciar-sesion',
+      'ca': 'inici-sessio',
+      'en': 'login',
+      'fr': 'connexion',
+      'de': 'anmeldung',
+    };
+    const carritoAction = {
+      'es': 'carrito-compra',
+      'ca': 'cistella-compra',
+      'en': 'shopping-basket',
+      'fr': 'panier',
+      'de': 'warenkorb',
+    };
+    const loginActionArray = ['iniciar-sesion', 'inici-sessio', 'login', 'connexion', 'anmeldung'];
+    const loginActionTranslated = loginAction[languageCode];
+    const initialURL = email ? `https://www.decantalo.com/${countryCode}/${languageCode}/${loginActionTranslated}?back=my-account&email=${email}&password=${password}&submitLogin=1&date=${Date.now()}` : `https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`;
+    const [url, setUrl] = useState(initialURL);
+    const config = {
+      accessible: ACCESSIBLE.WHEN_UNLOCKED,
+      authenticationPrompt: 'auth with yourself',
+      service: 'example',
+    }
 
+    const continueShipping = async()=>{
+      const urlRedirect = await SecureStorage.getItem('urlRedirect', config);
+      const email = await SecureStorage.getItem('email', config);
+      if(urlRedirect){
+        setTimeout(()=>{
+            setUrlEventListener(urlRedirect);
+            const carritoActionTranslated = carritoAction[_languageCode];
+            email ? changeWebviewURL('deeplink', 'url='+urlRedirect+'checkout') : changeWebviewURL('deeplink', `url=${urlRedirect}${carritoActionTranslated}?action=show`);
+        },2000);
+        await SecureStorage.removeItem('urlRedirect', config);
+      }
+    };
+    continueShipping();
+   
     useEffect(() => {
       SplashScreen.hide();
       
@@ -71,44 +109,81 @@ I18n.translations = {
             setNotificationsData(response);
           }
         }
-    );
+      );
+      Dimensions.addEventListener('change', ()=>{
+       setOrientation(Dimensions.get('window').width);
+      })
     }, []);
-    
-    const resetToLogin = async()=>{
-      const config = {
-        accessible: ACCESSIBLE.WHEN_UNLOCKED,
-        authenticationPrompt: 'auth with yourself',
-        service: 'example',
+    useEffect(() => {
+      if(loginAccess){
+        setIsFirstRenderTime(true);
+        const initialURL = email ? `https://www.decantalo.com/${countryCode}/${languageCode}/${loginActionTranslated}?back=my-account&email=${email}&password=${password}&submitLogin=1&date=${Date.now()}` : `https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`;
+        changeWebviewURL('deeplink', 'url='+initialURL);
       }
-      await SecureStorage.removeItem('email', config);
-      navigation.navigate('Login', {'languageCode':languageCode})
+    }, [loginAccess]);
+    const includesSubstring = (incommingURL)=>{
+      return loginActionArray.some(function (key) {
+        return incommingURL.indexOf(key) !== -1;
+      });
     }
-    const loginAction = {
-        'es': 'iniciar-sesion',
-        'ca': 'inici-sessio',
-        'en': 'login',
-        'fr': 'connexion',
-        'de': 'anmeldung',
-    };
-    const loginActionTranslated = loginAction[languageCode];
-    const [url, setUrl] = useState(`https://www.decantalo.com/${countryCode}/${languageCode}/${loginActionTranslated}?back=my-account&email=${email}&password=${password}&submitLogin=1`)
-  
+    const resetToRegister = async(lang, fromlogin = false)=>{
+      const hasEmail = await SecureStorage.getItem('email', config);
+      if(!hasEmail){
+        if(!fromlogin){
+          changeWebviewURL('deeplink', `url=https://www.decantalo.com/${_countryCode}/${_languageCode}/`)
+          await SecureStorage.setItem('urlRedirect',`https://www.decantalo.com/${_countryCode}/${_languageCode}/` , config);
+        }else{
+          changeWebviewURL('deeplink', `url=https://www.decantalo.com/${_countryCode}/${_languageCode}/`)
+        }
+        navigation.navigate('Register', {'languageCode':lang})
+      }  
+    }
+    const doLogout = async(lang)=>{
+      await SecureStorage.removeItem('email', config);
+      await SecureStorage.removeItem('password', config);
+
+      await SecureStorage.removeItem('urlRedirect', config);
+      navigation.navigate('Register', {'languageCode':lang})
+    }
+
+    const updateCountryAndLanguage = async(incommingURL)=>{
+        const data = incommingURL.split('decantalo.com')[1].split('/');
+        if(data[1].length === 2){
+          await SecureStorage.setItem('countryCode', data[1], config);
+          setcountryCode(data[1]);
+        }
+        if(data[2].length === 2){
+          await SecureStorage.setItem('languageCode', data[2], config);
+          setlanguageCode(data[2]);
+        }
+        if(incommingURL && incommingURL.includes('mylogout')){
+          doLogout(data[2]);
+        };
+        if(incommingURL && includesSubstring(incommingURL)){
+          resetToRegister(data[2], true);
+        };
+
+        if(incommingURL && incommingURL.includes('checkout')){
+          resetToRegister(data[2]);
+        };
+    }
+    
     const changeWebviewURL = (section, url) => {
       switch(section){
         case 'home':
           setIsNotificationsView(false);
-          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`);
+          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/?date=${Date.now()}`);
           break;
         case 'notifications': 
           setIsNotificationsView(true);
           break;  
         case 'personalArea': 
           setIsNotificationsView(false);
-          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/area-personal`);
+          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/area-personal`);
           break;
         case 'contact': 
           setIsNotificationsView(false);
-          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/contacta-con-decantalo`);
+          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/contacta-con-decantalo`);
           break;  
         case 'chat':
           setIsNotificationsView(false);
@@ -127,9 +202,10 @@ I18n.translations = {
           break; 
         default:
           setIsNotificationsView(false);
-          setUrl(`https://www.decantalo.com/${countryCode}/${languageCode}/`);
+          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/`);
       }
     };
+   
     return (
       <View style={{flex: 1, backgroundColor:"#f8f8f8"}}>
           <View style={{flex: isNotificationsView ? 0 : 5}}>
@@ -137,12 +213,15 @@ I18n.translations = {
             <WebView style={ isFirstRenderTime ? {width:'none'} : {display:'flex'},{marginTop: Platform.OS === 'ios' ? 30 : 0}}
               onLoadStart={() => {
                 if(isFirstRenderTime && !urlEventListener) {
-                  setTimeout(()=>{ changeWebviewURL('home'); },1000);
+                  setTimeout(()=>{ changeWebviewURL('home'); },1500);
                 }
                 setIsFirstRenderTime(false);
               }}
               onLoadEnd={() => {
                 this.webref.injectJavaScript(`
+                document.getElementById('dropdownMenuButtonSelectorMB').addEventListener('click', () => {
+                  window.ReactNativeWebView.postMessage('selectCountryNative');
+                });
                   document
                   .querySelector('body')
                   .addEventListener('click', interceptAnchorClickEvent);
@@ -161,9 +240,19 @@ I18n.translations = {
                 `);
               }}
               onNavigationStateChange={(navState) => {
-                if(navState.url && navState.url.includes('mylogout')){
-                  resetToLogin();
-                };
+                if(navState.url && navState.url.includes('decantalo.com')){
+                  updateCountryAndLanguage(navState.url);
+                }
+              }}
+              onMessage={(event) => {
+                const res = event.nativeEvent.data;
+                if(res == 'selectCountryNative'){
+                  navigation.navigate('Country', {
+                    email: email,
+                    password: password,
+                    languageCode: _languageCode
+                  })
+                }
               }}
               source={{ uri: url}}
               ref={(r) => (this.webref = r)}
@@ -200,7 +289,7 @@ I18n.translations = {
                 </View>
               </View>
             </View>
-            <View style={styles.menu}>
+            <View style={{position: "absolute", bottom:0 , left:0, width: win, height: 80, backgroundColor: "#393939", flexDirection: "row"}}>
                 <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('home')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/home.png")}></Image></View></TouchableOpacity>
                 <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('notifications')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/notifications.png")}></Image></View></TouchableOpacity>
                 <TouchableOpacity style={styles.menuOption} onPress={() => changeWebviewURL('personalArea')}><View style={styles.menuOptionView}><Image resizeMode="contain" style={styles.menuOptionImage} source={require("./../assets/areapersonal.png")}></Image></View></TouchableOpacity>

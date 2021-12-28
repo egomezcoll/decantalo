@@ -46,7 +46,7 @@ function LanguageScreen({ navigation }) {
           </View> 
           <View style={{flex: 1}}>
             <View style={styles.containerLoginBtn}>
-              <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('Register', {
+              <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('Country', {
           languageName: itemList[selectedItem].name,
           languageCode: itemList[selectedItem].code,
         })}>

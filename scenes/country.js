@@ -31,8 +31,12 @@ const PickerItem = Picker.Item;
 function countryScreen({ navigation, route }) {
     const { email, password, languageCode } = route.params;
     I18n.locale = languageCode;
-    const [selectedItem, setSelectedItem ] = useState(2);
-    
+    const [selectedItem, setSelectedItem ] = useState(11);
+    const config = {
+      accessible: ACCESSIBLE.WHEN_UNLOCKED,
+      authenticationPrompt: 'auth with yourself',
+      service: 'example',
+    };
     let itemList = [ {name: 'Alemania', code: 'de'}, {name: 'Australia', code: 'au'}, {name: 'Austria', code: 'at'}, {name: 'Bélgica', code: 'be'}, {name: 'Bulgaria', code: 'bg'},{name: 'Chipre', code: 'cy'}, {name: 'Corea del Sud', code: 'kr'}, {name: 'Croacia', code: 'hr'},{name: 'Dinamarca', code: 'dk'}, {name: 'Eslovaquia', code: 'sk'}, {name: 'Eslovenia', code: 'si'},{name: 'España', code: 'es'},{name: 'Estados Unidos', code: 'us'}, {name: 'Estonia', code: 'ee'}, {name: 'Finlandia', code: 'fi'},{name: 'Francia', code: 'fr'}, {name: 'Grecia', code: 'gr'},{name: 'Hong Kong', code: 'hk'},{name: 'Hungria', code: 'hu'},{name: 'Islandia', code: 'is'}, {name: 'Italia', code: 'it'},{name: 'Japón', code: 'jp'},{name: 'Letonia', code: 'lv'},{name: 'Liechtenstein', code: 'li'},{name: 'Lituania', code: 'lt'},{name: 'Luxemburgo', code: 'lu'},{name: 'Malta', code: 'mt'},{name: 'Noruega', code: 'no'},{name: 'Países Bajos', code: 'nl'},{name: 'Polonia', code: 'pl'},{name: 'Portugal', code: 'pt'},{name: 'Reino Unido', code: 'gb'},{name: 'República Checa', code: 'cz'},{name: 'Rumanía', code: 'ro'},{name: 'Singapur', code: 'sg'},{name: 'Suecia', code: 'se'},{name: 'Suiza', code: 'ch'}, {name: 'Taiwan', code: 'tw'}];
     switch(languageCode){
       case 'en':
@@ -52,31 +56,46 @@ function countryScreen({ navigation, route }) {
     
 
     const saveAndNavigate = async () => {
-      await Selligent.sendEvent(
-        (response) => { // success callback
-        },
-        (error) => { // error callback
-        },
-        {
-            'type': SelligentConstants.EventType.USER_REGISTER, // specific event
-            'data': { // optional
-                description: "User Register Event",
-                language: languageCode.toUpperCase(),
-                country: itemList[selectedItem].code,
+      const hasCountry = await SecureStorage.getItem('countryCode', config);
+        if(email){
+          if(!hasCountry || hasCountry != itemList[selectedItem].code){
+            await Selligent.sendEvent(
+              (response) => { // success callback
+              },
+              (error) => { // error callback
+              },
+              {
+                  'type': SelligentConstants.EventType.USER_REGISTER, // specific event
+                  'data': { // optional
+                      description: "User Register Event",
+                      language: languageCode.toUpperCase(),
+                      country: itemList[selectedItem].code,
+                  },
+                  'email': email, // required
+              }
+            );
+            await SecureStorage.setItem('email', email, config);
+            await SecureStorage.setItem('password', password, config);
+          }  
+        }else{
+          await Selligent.sendEvent(
+            (response) => { // success callback
             },
-            'email': email, // required
+            (error) => { // error callback
+            },
+            {
+                'type': SelligentConstants.EventType.USER_REGISTER, // specific event
+                'data': { // optional
+                    description: "Dispositivos anonimos",
+                    language: languageCode.toUpperCase(),
+                    country: itemList[selectedItem].code,
+                },
+                'email': 'correo@falso.com', // required
+            }
+          );
         }
-      );
-      const config = {
-        accessible: ACCESSIBLE.WHEN_UNLOCKED,
-        authenticationPrompt: 'auth with yourself',
-        service: 'example',
-      }
-      await SecureStorage.setItem('email', email, config);
-      await SecureStorage.setItem('password', password, config);
       await SecureStorage.setItem('languageCode', languageCode, config);
       await SecureStorage.setItem('countryCode', itemList[selectedItem].code, config);
-
 
       navigation.navigate('Webview', {
         countryCode: itemList[selectedItem].code,

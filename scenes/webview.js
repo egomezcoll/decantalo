@@ -6,7 +6,8 @@ import {
     View,
     FlatList,
     Platform,
-    StatusBar, 
+    StatusBar,
+    BackHandler, 
     Text
   } from "react-native";
 import SecureStorage, { ACCESSIBLE } from 'react-native-secure-storage'
@@ -54,6 +55,10 @@ I18n.translations = {
       'fr': 'panier',
       'de': 'warenkorb',
     };
+    BackHandler.addEventListener('hardwareBackPress', function () {     
+      changeWebviewURL('backbutton');
+      return true;
+    });
     const loginActionArray = ['iniciar-sesion', 'inici-sessio', 'login', 'connexion', 'anmeldung'];
     const loginActionTranslated = loginAction[languageCode];
     const initialURL = email ? `https://www.decantalo.com/${countryCode}/${languageCode}/${loginActionTranslated}?back=my-account&email=${email}&password=${password}&submitLogin=1&date=${Date.now()}` : `https://www.decantalo.com/${countryCode}/${languageCode}/?date=${Date.now()}`;
@@ -192,6 +197,15 @@ I18n.translations = {
             true;
           `);
           break; 
+        case 'backbutton':
+          setIsNotificationsView(false);
+          if(this.webref){
+            this.webref.injectJavaScript(`
+              window.history.back();
+              true;
+            `);
+          }
+          break;   
         case 'deeplink':
           setIsNotificationsView(false);          
           let finalDeeplink = url.split('url=')[1];

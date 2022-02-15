@@ -1,4 +1,4 @@
-com.decantalo
+com.lluraferi.decantaloes
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -534,6 +534,7 @@ attr popupWindowStyle
 attr preserveIconSpacing
 attr pressedStateOverlayImage
 attr pressedTranslationZ
+attr previewId
 attr progressBarAutoRotateInterval
 attr progressBarImage
 attr progressBarImageScaleType
@@ -614,6 +615,7 @@ attr statusBarForeground
 attr statusBarScrim
 attr strokeColor
 attr strokeWidth
+attr styleId
 attr subMenuArrow
 attr submitBackground
 attr subtitle
@@ -621,6 +623,7 @@ attr subtitleTextAppearance
 attr subtitleTextColor
 attr subtitleTextStyle
 attr suggestionRowLayout
+attr supportChina
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -753,7 +756,6 @@ attr zOrderOnTop
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
-bool enable_gcm_scheduler_default
 bool enable_system_alarm_service_default
 bool enable_system_foreground_service_default
 bool enable_system_job_service_default
@@ -860,6 +862,9 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color emui_color_gray_1
+color emui_color_gray_10
+color emui_color_gray_7
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -941,12 +946,6 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
-color place_autocomplete_prediction_primary_text
-color place_autocomplete_prediction_primary_text_highlight
-color place_autocomplete_prediction_secondary_text
-color place_autocomplete_search_hint
-color place_autocomplete_search_text
-color place_autocomplete_separator
 color primary_dark
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -973,6 +972,9 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color upsdk_color_gray_1
+color upsdk_color_gray_10
+color upsdk_color_gray_7
 dimen WheelItemSpace
 dimen WheelLabelTextSize
 dimen WheelPadding
@@ -1296,16 +1298,6 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
-dimen place_autocomplete_button_padding
-dimen place_autocomplete_powered_by_google_height
-dimen place_autocomplete_powered_by_google_start
-dimen place_autocomplete_prediction_height
-dimen place_autocomplete_prediction_horizontal_margin
-dimen place_autocomplete_prediction_primary_text
-dimen place_autocomplete_prediction_secondary_text
-dimen place_autocomplete_progress_horizontal_margin
-dimen place_autocomplete_progress_size
-dimen place_autocomplete_separator_start
 dimen test_mtrl_calendar_day_cornerSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -1315,6 +1307,11 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+dimen upsdk_margin_l
+dimen upsdk_margin_m
+dimen upsdk_margin_xs
+dimen upsdk_master_body_2
+dimen upsdk_master_subtitle
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -1450,6 +1447,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_notification
 drawable ic_stat_name
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1473,10 +1471,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable places_ic_clear
-drawable places_ic_search
-drawable powered_by_google_dark
-drawable powered_by_google_light
 drawable redbox_top_border_background
 drawable sm_ic_action_camera
 drawable sm_ic_action_gallery
@@ -1490,6 +1484,10 @@ drawable sm_ic_stop
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upsdk_cancel_bg
+drawable upsdk_cancel_normal
+drawable upsdk_cancel_pressed_bg
+drawable upsdk_third_download_bg
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1539,6 +1537,7 @@ id accessibility_label
 id accessibility_role
 id accessibility_state
 id accessibility_value
+id action
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1563,14 +1562,18 @@ id adjust_height
 id adjust_width
 id alertTitle
 id all
+id allsize_textview
 id always
+id appsize_textview
 id async
 id auto
 id beginning
 id blocking
 id bottom
 id buttonPanel
+id cancel_bg
 id cancel_button
+id cancel_imageview
 id catalyst_redbox_title
 id center
 id centerCrop
@@ -1590,6 +1593,8 @@ id confirm_button
 id container
 id content
 id contentPanel
+id content_layout
+id content_textview
 id coordinator
 id curved
 id custom
@@ -1606,8 +1611,11 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id disableHome
+id divider
+id download_info_progress
 id dropdown_menu
 id edit_query
+id enable_service_text
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1637,9 +1645,13 @@ id ghost_view
 id ghost_view_holder
 id group_divider
 id hideable
+id hms_message_text
+id hms_progress_bar
+id hms_progress_text
 id home
 id homeAsUp
 id horizontal
+id huaweimap
 id hybrid
 id icon
 id icon_group
@@ -1691,6 +1703,8 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id name_layout
+id name_textview
 id navigation_header_container
 id never
 id noScroll
@@ -1709,16 +1723,6 @@ id password_toggle
 id peekHeight
 id pictureResponse
 id pin
-id place_autocomplete_clear_button
-id place_autocomplete_powered_by_google
-id place_autocomplete_prediction_primary_text
-id place_autocomplete_prediction_secondary_text
-id place_autocomplete_progress
-id place_autocomplete_search_button
-id place_autocomplete_search_input
-id place_autocomplete_separator
-id plot_console_web_view
-id plot_nearby_fragment
 id progress_circular
 id progress_horizontal
 id radio
@@ -1745,6 +1749,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scroll_layout
 id scrollable
 id search_badge
 id search_bar
@@ -1762,6 +1767,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id size_layout
 id skipCollapsed
 id slide
 id sm_action_navigation_back
@@ -1772,6 +1778,7 @@ id sm_dialog_button_container
 id sm_dialog_message
 id sm_dialog_title
 id sm_dialog_upper_divider
+id sm_huaweiMapView_container
 id sm_iac_html_body
 id sm_iac_html_button_container
 id sm_iac_html_first_button
@@ -1802,7 +1809,6 @@ id straight
 id stretch
 id submenuarrow
 id submit_area
-id swipe_refresh
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1830,6 +1836,9 @@ id text_input_start_icon
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id third_app_dl_progress_text
+id third_app_dl_progressbar
+id third_app_warn_text
 id time
 id title
 id titleDividerNoCustom
@@ -1847,6 +1856,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id version_layout
+id version_textview
 id vertical
 id view_offset_helper
 id view_tag_instance_handle
@@ -1924,6 +1935,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_endisable_service
+layout activity_huawei_map
 layout activity_map
 layout activity_map_old
 layout activity_notification
@@ -1947,10 +1960,12 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dev_loading_view
+layout empty_layout
 layout fps_view
 layout fragment_sm_inappcontent_recycler_view
 layout fragment_sm_inappcontent_web_view
 layout fragment_smdialog_material
+layout hms_download_progress
 layout iac_html_card_layout
 layout launch_screen
 layout mtrl_alert_dialog
@@ -1987,12 +2002,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout place_autocomplete_fragment
-layout place_autocomplete_item_powered_by_google
-layout place_autocomplete_item_prediction
-layout place_autocomplete_progress
-layout plot_console_activity
-layout plot_console_fragment
 layout redbox_item_frame
 layout redbox_item_title
 layout redbox_view
@@ -2014,6 +2023,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout upsdk_app_dl_progress_dialog
+layout upsdk_ota_update_view
 menu menu_map
 menu menu_notification
 menu menu_sell_base
@@ -2051,7 +2062,6 @@ string abc_toolbar_collapse_description
 string action_back_label
 string action_forward_label
 string alert_description
-string app_icon_sticky_notification_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2117,13 +2127,38 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fcm_fallback_notification_channel_label
 string gcm_defaultSenderId
-string gcm_fallback_notification_channel_label
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string header_description
 string hide_bottom_view_on_scroll_behavior
+string hms_abort
+string hms_abort_message
+string hms_bindfaildlg_message
+string hms_bindfaildlg_title
+string hms_cancel
+string hms_check_failure
+string hms_checking
+string hms_confirm
+string hms_download_failure
+string hms_download_no_space
+string hms_download_retry
+string hms_downloading_loading
+string hms_install
+string hms_install_message
+string hms_is_spoof
+string hms_push_channel
+string hms_push_google
+string hms_push_vmall
+string hms_retry
+string hms_spoof_hints
+string hms_update
+string hms_update_continue
+string hms_update_message
+string hms_update_message_new
+string hms_update_nettype
+string hms_update_title
 string icon_content_description
 string image_description
 string imagebutton_description
@@ -2170,11 +2205,10 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string place_autocomplete_clear_button
-string place_autocomplete_search_hint
-string plot_title_console_activity
 string progressbar_description
 string project_id
+string push_cat_body
+string push_cat_head
 string radiogroup_description
 string rn_tab_description
 string scrollbar_description
@@ -2200,6 +2234,29 @@ string title_activity_response
 string title_activity_sell_base
 string title_activity_view
 string toolbar_description
+string upsdk_app_download_info_new
+string upsdk_app_download_installing
+string upsdk_app_size
+string upsdk_app_version
+string upsdk_appstore_install
+string upsdk_cancel
+string upsdk_checking_update_prompt
+string upsdk_choice_update
+string upsdk_detail
+string upsdk_getting_message_fail_prompt_toast
+string upsdk_mobile_dld_warn
+string upsdk_no_available_network_prompt_toast
+string upsdk_ota_app_name
+string upsdk_ota_cancel
+string upsdk_ota_force_cancel_new
+string upsdk_ota_notify_updatebtn
+string upsdk_ota_title
+string upsdk_storage_utils
+string upsdk_store_url
+string upsdk_third_app_dl_cancel_download_prompt_ex
+string upsdk_third_app_dl_install_failed
+string upsdk_third_app_dl_sure_cancel_download
+string upsdk_update_check_no_new_version
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2419,6 +2476,7 @@ style Base_Widget_MaterialComponents_PopupMenu_Overflow
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
+style Base_Translucent
 style CalendarDatePickerDialog
 style CalendarDatePickerStyle
 style CardView
@@ -2971,7 +3029,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
-styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
+styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType previewId styleId supportChina uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialButton android_insetLeft android_insetRight android_insetTop android_insetBottom android_checkable backgroundTint backgroundTintMode cornerRadius elevation icon iconGravity iconPadding iconSize iconTint iconTintMode rippleColor shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth

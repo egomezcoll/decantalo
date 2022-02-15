@@ -46,9 +46,51 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Войти"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Войти через аккаунт Google"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Другое"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Другое"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Удалить поисковый запрос"</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Поиск"</string>
+    <string name="hms_abort" priority="translator">"Остановить"</string>
+    <string name="hms_abort_message" priority="translator">"Остановить загрузку?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s не может использовать HMS Core. Перейдите в Диспетчер (Диспетчер телефона) или Настройки, предоставьте все права для %2$s (включая автозапуск и косвенный запуск) и повторите попытку."</string>
+    <string name="hms_cancel" priority="translator">"Отмена"</string>
+    <string name="hms_check_failure" priority="translator">"Сбой проверки обновлений."</string>
+    <string name="hms_checking" priority="translator">"Проверка обновлений..."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Сбой загрузки пакета HMS Core."</string>
+    <string name="hms_download_no_space" priority="translator">"Недостаточно памяти. Невозможно завершить загрузку."</string>
+    <string name="hms_download_retry" priority="translator">"Сбой загрузки. Повторить попытку?"</string>
+    <string name="hms_downloading_loading" priority="LT">"Загрузка"</string>
+    <string name="hms_install" priority="translator">"Установить"</string>
+    <string name="hms_install_message" priority="translator">"Для использования этой функции необходимо установить HMS Core. Установить?"</string>
+    <string name="hms_is_spoof" priority="LT">"Кажется, на Вашем устройстве установлена неофициальная версия HMS Core (%1$s). В разделе Настройки удалите HMS Core и вернитесь в это приложение, чтобы установить официальную версию."</string>
+    <string name="hms_push_channel" priority="Original">"По умолчанию"</string>
+    <string name="hms_retry" priority="translator">"Повтор"</string>
+    <string name="hms_spoof_hints" priority="LT">"Внимание"</string>
+    <string name="hms_update" priority="translator">"Обновить"</string>
+    <string name="hms_update_continue" priority="LT">"Загрузить"</string>
+    <string name="hms_update_message" priority="translator">"Чтобы использовать эту функцию, необходимо обновить HMS Core до последней версии. Обновить?"</string>
+    <string name="hms_update_message_new" priority="LT">"Для работы этой службы требуется последняя версия приложения:\n\n%1$s"</string>
+    <string name="hms_update_nettype" priority="LT">"Нет Wi-Fi-соединения. Загрузить по мобильной сети передачи данных?"</string>
+    <string name="hms_update_title" priority="translator">"HMS Core"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Поиск"</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">">999"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Установить"</string>
+    <string name="upsdk_app_download_installing" priority="translator">"Загрузка %s..."</string>
+    <string name="upsdk_app_size" priority="translator">"Размер"</string>
+    <string name="upsdk_app_version" priority="LT">"Версия"</string>
+    <string name="upsdk_appstore_install" priority="translator">"%s требуется для обновления приложения. Установить сейчас?"</string>
+    <string name="upsdk_cancel" priority="translator">"Отмена"</string>
+    <string name="upsdk_checking_update_prompt" priority="LT">"Проверка обновлений…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Доступно обновление. Загрузите и установите его."</string>
+    <string name="upsdk_detail" priority="translator">"Сведения"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Сбой получения данных. Повторите попытку позднее."</string>
+    <string name="upsdk_mobile_dld_warn" priority="translator">"Вы подключены к мобильной сети. Для загрузки будет использовано %1$s трафика."</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Нет интернет-соединения. Проверьте настройки сети."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Приложение"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Позже"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Выйти"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Обновить"</string>
+    <string name="upsdk_ota_title" priority="translator">"Новая версия"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s МБ"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Отменить установку?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Сбой установки."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Да"</string>
+    <string name="upsdk_update_check_no_new_version" priority="LT">"Это последняя версия."</string>
 </resources>

@@ -46,9 +46,51 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Iniciar sesión"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Iniciar sesión con Google"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Varios"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Varios"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Borra a busca"</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Buscar"</string>
+    <string name="hms_abort" priority="translator">"Parar"</string>
+    <string name="hms_abort_message" priority="translator">"Deter a descarga?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s non pode usar HMS Core. Inicie Optimizador (Xestor do teléfono) ou vaia a Configuración, active todos os permisos para %2$s (incluído o inicio automático e o secundario) e ténteo de novo."</string>
+    <string name="hms_cancel" priority="translator">"Cancelar"</string>
+    <string name="hms_check_failure" priority="translator">"Erro ao comprobar actualizacións."</string>
+    <string name="hms_checking" priority="translator">"Comprobando actualizacións..."</string>
+    <string name="hms_confirm" priority="translator">"Aceptar"</string>
+    <string name="hms_download_failure" priority="translator">"Erro ao descargar o paquete de HMS Core."</string>
+    <string name="hms_download_no_space" priority="translator">"Non hai espazo libre suficiente. Non se pode completar a descarga."</string>
+    <string name="hms_download_retry" priority="translator">"Erro ao descargar. Tentar de novo?"</string>
+    <string name="hms_downloading_loading" priority="LT">"Descargando"</string>
+    <string name="hms_install" priority="translator">"Instalar"</string>
+    <string name="hms_install_message" priority="translator">"É preciso ter instalado HMS Core para usar esta función. Instalar?"</string>
+    <string name="hms_is_spoof" priority="LT">"Parece que ten unha versión non oficial de HMS Core (%1$s) instalada no seu dispositivo. Desinstale HMS Core desde Configuración e volva a esta aplicación para instalar a versión oficial."</string>
+    <string name="hms_push_channel" priority="Original">"Predefinido"</string>
+    <string name="hms_retry" priority="translator">"Tentar de novo"</string>
+    <string name="hms_spoof_hints" priority="LT">"Nota"</string>
+    <string name="hms_update" priority="translator">"Actualizar"</string>
+    <string name="hms_update_continue" priority="LT">"Descargar"</string>
+    <string name="hms_update_message" priority="translator">"Actualice á última versión de HMS Core para usar esta función. Actualizar agora?"</string>
+    <string name="hms_update_message_new" priority="LT">"Este servizo require a última versión da seguinte app:\n\n%1$s"</string>
+    <string name="hms_update_nettype" priority="translator">"Non hai conexión Wi-Fi. Descargar con datos móbiles?"</string>
+    <string name="hms_update_title" priority="translator">"HMS Core"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Buscar"</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">">999"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Instalar"</string>
+    <string name="upsdk_app_download_installing" priority="translator">"Descargando %s…"</string>
+    <string name="upsdk_app_size" priority="translator">"Tamaño"</string>
+    <string name="upsdk_app_version" priority="translator">"Versión"</string>
+    <string name="upsdk_appstore_install" priority="translator">"Requírese %s para actualizar esta aplicación. Instalar agora?"</string>
+    <string name="upsdk_cancel" priority="translator">"Cancelar"</string>
+    <string name="upsdk_checking_update_prompt" priority="LT">"Buscando actualizacións…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Actualización dispoñible. Descargue e instale a última versión."</string>
+    <string name="upsdk_detail" priority="translator">"Detalles"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Non se pode recuperar a información. Ténteo de novo máis tarde."</string>
+    <string name="upsdk_mobile_dld_warn" priority="translator">"Xa está conectado a unha rede móbil. A descarga consumirá %1$s de datos."</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Sen Internet. Comprobe a súa configuración de rede."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"App"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Máis tarde"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Saír"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Actualizar"</string>
+    <string name="upsdk_ota_title" priority="translator">"Nova versión"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Cancelar a instalación?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Erro ao instalar."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Si"</string>
+    <string name="upsdk_update_check_no_new_version" priority="Reviewed">"A versión está actualizada."</string>
 </resources>

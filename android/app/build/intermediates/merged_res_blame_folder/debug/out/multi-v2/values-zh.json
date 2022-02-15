@@ -4,7 +4,7 @@
             "outputFile": "/Users/edge/Development/aplicativos/Decantalo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "/Users/edge/.gradle/caches/transforms-2/files-2.1/db0d5ff99d7f6ff5d7bde9ae451bf184/jetified-WheelPicker-1.0.3/res/values-zh/values-zh.xml",
+                    "source": "/Users/edge/.gradle/caches/transforms-2/files-2.1/c57fa1e6b3fc98b9b838ba378e8afe02/jetified-WheelPicker-1.0.3/res/values-zh/values-zh.xml",
                     "from": {
                         "startLines": "2,16",
                         "startColumns": "4,4",

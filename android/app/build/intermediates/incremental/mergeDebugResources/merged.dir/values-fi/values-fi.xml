@@ -46,9 +46,51 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Kirjaudu sisään"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Kirjaudu Google-tilille"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Muut"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Muut"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Tyhjennä haku."</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Haku"</string>
+    <string name="hms_abort" priority="translator">"Lopeta"</string>
+    <string name="hms_abort_message" priority="translator">"Pysäytetäänkö lataus?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s ei voi käyttää HMS Core -palveluja. Käynnistä Optimoija (puhelimen hallinta) tai mene kohtaan Asetukset, ota käyttöön kaikki luvat palvelulle %2$s (mukaan lukien automaattinen käynnistys ja toissijainen käynnistys) ja yritä uudelleen."</string>
+    <string name="hms_cancel" priority="translator">"Peruuta"</string>
+    <string name="hms_check_failure" priority="translator">"Päivitysten tarkistaminen epäonnistui."</string>
+    <string name="hms_checking" priority="translator">"Tarkistetaan päivityksiä…"</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"HMS Core -paketin lataus epäonnistui."</string>
+    <string name="hms_download_no_space" priority="translator">"Vapaa tila ei riitä. Latausta ei voi suorittaa."</string>
+    <string name="hms_download_retry" priority="translator">"Lataaminen epäonnistui. Yritetäänkö uudelleen?"</string>
+    <string name="hms_downloading_loading" priority="LT">"Ladataan"</string>
+    <string name="hms_install" priority="translator">"Asenna"</string>
+    <string name="hms_install_message" priority="translator">"HMS Core -palveluiden pitää olla asennettuna, jotta tätä ominaisuutta voi käyttää. Asennetaanko?"</string>
+    <string name="hms_is_spoof" priority="LT">"Laitteellesi asennettu HMS Core -versio (%1$s) vaikuttaa olevan epävirallinen. Poista HMS Coren asennus asetuksista ja palaa tähän sovellukseen virallisen version asennusta varten."</string>
+    <string name="hms_push_channel" priority="Original">"Oletus"</string>
+    <string name="hms_retry" priority="translator">"Yritä uudelleen"</string>
+    <string name="hms_spoof_hints" priority="LT">"Huomautus"</string>
+    <string name="hms_update" priority="translator">"Päivitä"</string>
+    <string name="hms_update_continue" priority="LT">"Lataa"</string>
+    <string name="hms_update_message" priority="translator">"Päivitä HMS Core -palveluiden uusimpaan versioon, jotta voit käyttää tätä ominaisuutta. Päivitetäänkö nyt?"</string>
+    <string name="hms_update_message_new" priority="LT">"Tämä palvelu vaatii seuraavan sovelluksen uusimman version:\n\n%1$s"</string>
+    <string name="hms_update_nettype" priority="LT">"Ei Wi-Fi-yhteyttä. Päivitetäänkö käyttämällä mobiilidataa?"</string>
+    <string name="hms_update_title" priority="translator">"HMS Core"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Haku"</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Asenna"</string>
+    <string name="upsdk_app_download_installing" priority="translator">"Ladataan %s…"</string>
+    <string name="upsdk_app_size" priority="translator">"Koko"</string>
+    <string name="upsdk_app_version" priority="translator">"Versio"</string>
+    <string name="upsdk_appstore_install" priority="translator">"%s tarvitaan tämän sovelluksen päivitystä varten. Asennetaanko nyt?"</string>
+    <string name="upsdk_cancel" priority="translator">"Peruuta"</string>
+    <string name="upsdk_checking_update_prompt" priority="LT">"Tarkistetaan, onko päivityksiä saatavilla…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Päivitys on saatavana. Lataa ja asenna uusin versio."</string>
+    <string name="upsdk_detail" priority="translator">"Tiedot"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Tietoja ei voitu noutaa. Yritä myöhemmin uudelleen."</string>
+    <string name="upsdk_mobile_dld_warn" priority="translator">"Olet tällä hetkellä yhteydessä mobiiliverkkoon. Lataaminen nyt käyttää %1$s dataa."</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Ei Internet-yhteyttä. Tarkista verkkoasetukset."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Sovellus"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Myöhemmin"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Poistu"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Päivitä"</string>
+    <string name="upsdk_ota_title" priority="translator">"Uusi versio"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s Mt"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Perutetaanko asennus?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Asennus epäonnistui."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Kyllä"</string>
+    <string name="upsdk_update_check_no_new_version" priority="LT">"Versiosi on ajan tasalla."</string>
 </resources>

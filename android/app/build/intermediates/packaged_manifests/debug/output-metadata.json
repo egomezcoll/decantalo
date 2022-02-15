@@ -4,14 +4,14 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.decantalo",
+  "applicationId": "com.lluraferi.decantaloes",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 26983450,
+      "versionName": "2.0.7",
       "outputFile": "AndroidManifest.xml"
     }
   ]

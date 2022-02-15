@@ -46,9 +46,51 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Hasi saioa"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Hasi saioa Google kontuarekin"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Askotarikoak"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Askotarikoak"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Garbitu bilaketa"</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Bilaketa"</string>
+    <string name="hms_abort" priority="translator">"Gelditu"</string>
+    <string name="hms_abort_message" priority="translator">"Deskarga gelditu?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s gailuak ezin izan du erabili HMS Core. Abiarazi Optimizatzailea (Telefono-kudeatzailea) edo joan ezarpenetara, gaitu %2$s gailuen baimen guztiak (abiarazte automatikoa eta bigarren mailako abiaraztea barne) eta saiatu berriro."</string>
+    <string name="hms_cancel" priority="translator">"Utzi"</string>
+    <string name="hms_check_failure" priority="translator">"Ezin izan da begiratu eguneratzerik baden."</string>
+    <string name="hms_checking" priority="translator">"Eguneratzerik baden begiratzen…"</string>
+    <string name="hms_confirm" priority="translator">"Ados"</string>
+    <string name="hms_download_failure" priority="translator">"Ezin izan da deskargatu HMS Core paketea."</string>
+    <string name="hms_download_no_space" priority="translator">"Ez dago nahikoa toki. Ezin da deskarga amaitu."</string>
+    <string name="hms_download_retry" priority="translator">"Ezin izan da deskargatu. Berriro saiatu?"</string>
+    <string name="hms_downloading_loading" priority="LT">"Deskargatzen"</string>
+    <string name="hms_install" priority="translator">"Instalatu"</string>
+    <string name="hms_install_message" priority="translator">"Eginbidea erabiltzeko, HMS Core-k instalatuta egon behar du. Instalatu?"</string>
+    <string name="hms_is_spoof" priority="LT">"HMS Core-ren ofiziala ez den bertsio bat (%1$s) daukazu gailuan instalatuta. Desinstalatu HMS Core ezarpenetatik eta itzuli aplikazio honetara, bertsio ofiziala instalatzeko."</string>
+    <string name="hms_push_channel" priority="Original">"Lehenetsia"</string>
+    <string name="hms_retry" priority="translator">"Saiatu berriro"</string>
+    <string name="hms_spoof_hints" priority="LT">"Oharra"</string>
+    <string name="hms_update" priority="translator">"Eguneratu"</string>
+    <string name="hms_update_continue" priority="LT">"Deskargatu"</string>
+    <string name="hms_update_message" priority="translator">"Eginbidea erabiltzeko, eguneratu HMS Core paketearen azken bertsiora. Orain eguneratu?"</string>
+    <string name="hms_update_message_new" priority="LT">"Zerbitzu honek aplikazio honen azken bertsioa behar du:\n\n%1$s"</string>
+    <string name="hms_update_nettype" priority="LT">"Ez dago wifi-konexiorik. Datu mugikorrak erabiliz deskargatu?"</string>
+    <string name="hms_update_title" priority="translator">"HMS Core"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Bilatu"</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Instalatu"</string>
+    <string name="upsdk_app_download_installing" priority="translator">"%s deskargatzen…"</string>
+    <string name="upsdk_app_size" priority="translator">"Tamaina"</string>
+    <string name="upsdk_app_version" priority="translator">"Bertsioa"</string>
+    <string name="upsdk_appstore_install" priority="translator">"%s behar da aplikazioa eguneratzeko. Instalatu nahi duzu?"</string>
+    <string name="upsdk_cancel" priority="translator">"Utzi"</string>
+    <string name="upsdk_checking_update_prompt" priority="LT">"Eguneratzerik baden begiratzen..."</string>
+    <string name="upsdk_choice_update" priority="LT">"Eguneratzea erabilgarri. Deskargatu eta instalatu azken bertsioa."</string>
+    <string name="upsdk_detail" priority="translator">"Xehetasunak"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Ezin izan da berreskuratu informaziorik. Saiatu berriro geroago."</string>
+    <string name="upsdk_mobile_dld_warn" priority="translator">"Une honetan sare mugikorrera konektatuta zaude. Deskargatuz gero, %1$s datu erabiliko dira."</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Ez dago Interneteko konexiorik. Egiaztatu sarearen ezarpenak."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Aplikazioa"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Geroago"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Irten"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Eguneratu"</string>
+    <string name="upsdk_ota_title" priority="translator">"Bertsio berria"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Instalazioa bertan behera utzi?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Ezin izan da instalatu."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Bai"</string>
+    <string name="upsdk_update_check_no_new_version" priority="Reviewed">"Bertsioa eguneratuta dago."</string>
 </resources>

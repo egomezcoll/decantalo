@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect'
 
 import com.android.build.OutputFile
 
@@ -220,6 +221,10 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    api 'com.huawei.hms:base:6.2.0.300'
+    api 'com.huawei.hms:push:6.1.0.300'
+    api 'com.huawei.hms:maps:6.2.0.301'
 }
 
 // Run this once to be able to run the application with BUCK

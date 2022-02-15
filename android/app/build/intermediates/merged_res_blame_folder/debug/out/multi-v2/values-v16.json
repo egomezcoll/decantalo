@@ -4,17 +4,7 @@
             "outputFile": "/Users/edge/Development/aplicativos/Decantalo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/edge/.gradle/caches/transforms-2/files-2.1/eb4982f4874c129102a9f0bda9cbbf77/core-1.1.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/edge/.gradle/caches/transforms-2/files-2.1/af86fa1a1737382e789927995ddc5156/appcompat-1.1.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/edge/.gradle/caches/transforms-2/files-2.1/fbfdf451a33e7527975628e570a8b6f1/appcompat-1.1.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/edge/.gradle/caches/transforms-2/files-2.1/b2136f1041999d32751c3af8e06b04ee/core-1.1.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

@@ -1,14 +1,14 @@
+com/lluraferi/decantaloes/BuildConfig.java
+ com.lluraferi.decantaloes.BuildConfig
 com/decantalo/MainApplication.java
- com.decantalo.MainApplication
- com.decantalo.MainApplication$1
+ com.lluraferi.decantaloes.MainApplication
+ com.lluraferi.decantaloes.MainApplication$1
 com/decantalo/ReactNativeFlipper.java
- com.decantalo.ReactNativeFlipper
- com.decantalo.ReactNativeFlipper$1
- com.decantalo.ReactNativeFlipper$2
- com.decantalo.ReactNativeFlipper$2$1
+ com.lluraferi.decantaloes.ReactNativeFlipper
+ com.lluraferi.decantaloes.ReactNativeFlipper$1
+ com.lluraferi.decantaloes.ReactNativeFlipper$2
+ com.lluraferi.decantaloes.ReactNativeFlipper$2$1
 com/decantalo/MainActivity.java
- com.decantalo.MainActivity
-com/decantalo/BuildConfig.java
- com.decantalo.BuildConfig
+ com.lluraferi.decantaloes.MainActivity
 com/facebook/react/PackageList.java
  com.facebook.react.PackageList

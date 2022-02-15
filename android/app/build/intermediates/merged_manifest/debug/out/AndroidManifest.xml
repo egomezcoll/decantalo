@@ -1,59 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.decantalo"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.lluraferi.decantaloes"
+    android:versionCode="26983450"
+    android:versionName="2.0.7" >
 
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="29" />
+        android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
-    <uses-feature
-        android:name="android.hardware.location"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.location.network"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.location.gps"
-        android:required="false" />
+    <permission
+        android:name="com.lluraferi.decantaloes.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signature" /> <!-- PUSH_PROVIDER and PUSH_WRITE_PROVIDER are both provider registered permissions for the notification switch. -->
+    <!-- The SDK's notification bar switch, EMUI 9.x becomes write to the local sp, sharing the file through the provider to the push-rom, which reads the sp file to get the status of the notification bar switch. -->
+    <permission
+        android:name="com.lluraferi.decantaloes.permission.PUSH_PROVIDER"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.lluraferi.decantaloes.permission.PUSH_WRITE_PROVIDER"
+        android:protectionLevel="signature" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.lluraferi.decantaloes.permission.PROCESS_PUSH_MSG" />
+    <uses-permission android:name="com.lluraferi.decantaloes.permission.PUSH_PROVIDER" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
-    <uses-permission android:name="com.huawei.hms.permission.ACTIVITY_RECOGNITION" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 如果是安卓8.0，应用编译配置的targetSdkVersion>=26，请务必添加以下权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 应用市场9.0版本必须使用该权限获取用户的服务地 -->
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
 
+    <queries>
+        <intent>
+            <action android:name="com.apptouch.intent.action.update_hms" />
+        </intent>
+        <intent>
+            <action android:name="com.huawei.appmarket.intent.action.AppDetail" />
+        </intent>
+
+        <package android:name="com.hisilicon.android.hiRMService" />
+
+        <intent>
+            <action android:name="com.huawei.hms.core.aidlservice" />
+        </intent>
+        <intent>
+            <action android:name="com.huawei.hms.core" />
+        </intent>
+
+        <package android:name="com.huawei.hff" />
+        <package android:name="com.huawei.hms" />
+        <package android:name="com.huawei.hwid" />
+    </queries>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" /> <!-- Used to render google map -->
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
 
-    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
-
     <application
-        android:name="com.decantalo.MainApplication"
+        android:name="com.lluraferi.decantaloes.MainApplication"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
@@ -61,7 +77,7 @@
         <service android:name="com.plotprojects.retail.android.BackgroundProcessingService" />
 
         <activity
-            android:name="com.decantalo.MainActivity"
+            android:name="com.lluraferi.decantaloes.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
             android:label="@string/app_name"
             android:launchMode="singleTask"
@@ -83,69 +99,153 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="com.huawei.hms.map.version"
+            android:value="5.0.1.300" />
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:maps"
+            android:value="maps:6.2.0.301" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:maps:huawei_module_maps"
+            android:value="12" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:maps:huawei_module_huaweimaps"
+            android:value="12" />
+
+        <receiver
+            android:name="com.huawei.hms.support.api.push.PushMsgReceiver"
+            android:directBootAware="true"
+            android:exported="true"
+            android:permission="com.lluraferi.decantaloes.permission.PROCESS_PUSH_MSG" >
+            <intent-filter>
+
+                <!-- Mandatory, be used to receive notification bar message click event. -->
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />
+                <!-- Optional, compatible with old huawei phones. -->
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.huawei.hms.support.api.push.PushReceiver"
+            android:directBootAware="true"
+            android:exported="true"
+            android:permission="com.lluraferi.decantaloes.permission.PROCESS_PUSH_MSG" >
+            <intent-filter>
+
+                <!-- Mandatory, be used to receive tokens. -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- Mandatory, be used to receive messages. -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+            </intent-filter>
+        </receiver> <!-- Definition of receiving service for notification bar and pass-through message of non-huawei mobile phone. -->
+        <service
+            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pushservice" >
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG" />
+                <action android:name="com.huawei.push.msg.PASSBY_MSG" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.huawei.hms.support.api.push.PushProvider"
+            android:authorities="com.lluraferi.decantaloes.huawei.push.provider"
+            android:exported="true"
+            android:permission="com.lluraferi.decantaloes.permission.PUSH_PROVIDER"
+            android:readPermission="com.lluraferi.decantaloes.permission.PUSH_PROVIDER"
+            android:writePermission="com.lluraferi.decantaloes.permission.PUSH_WRITE_PROVIDER" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:push"
+            android:value="push:6.1.0.300" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:push:push"
+            android:value="1" />
+
+        <provider
+            android:name="com.huawei.hms.aaid.InitProvider"
+            android:authorities="com.lluraferi.decantaloes.aaidinitprovider"
+            android:exported="false"
+            android:initOrder="500" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:opendevice"
+            android:value="opendevice:5.1.1.307" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:opendevice:push"
+            android:value="1" /> <!-- 为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据 -->
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:base"
+            android:value="base:6.2.0.300" /> <!-- SDK依赖的HMSCore的最低api level元数据 -->
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:base:hmscore"
+            android:value="1" />
+
         <provider
             android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-            android:authorities="com.decantalo.fileprovider"
+            android:authorities="com.lluraferi.decantaloes.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_paths" />
+        </provider> <!-- 用于判断是否集成了本lib -->
+        <meta-data
+            android:name="availableLoaded"
+            android:value="yes" />
+
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.lluraferi.decantaloes.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
         </provider>
 
         <activity
-            android:name="com.plotprojects.retail.android.LandingPageActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false" />
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="behind"
+            android:theme="@style/Base_Translucent" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
         <activity
-            android:name="com.plotprojects.retail.android.ConsoleActivity"
-            android:exported="false"
-            android:label="@string/plot_title_console_activity" />
+            android:name="com.huawei.hms.activity.EnableServiceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false" >
+        </activity>
 
         <provider
-            android:name="com.plotprojects.retail.android.WorkContentProvider"
-            android:authorities="com.decantalo.plot.WorkContentProvider"
-            android:exported="false" />
-        <provider
-            android:name="com.plotprojects.retail.android.DebugLogProvider"
-            android:authorities="com.decantalo.plot.debuglogprovider"
-            android:exported="true" />
-
-        <receiver
-            android:name="com.plotprojects.retail.android.PlotBroadcastHandler"
+            android:name="com.huawei.hms.device.provider.CheckHmsProvider"
+            android:authorities="com.lluraferi.decantaloes.hms.device.validate.spoofprovider"
             android:exported="false"
-            android:label="Plot Projects Broadcast Handler" />
-        <receiver
-            android:name="com.plotprojects.retail.android.PlotBootReceiver"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-                <action android:name="android.intent.action.AIRPLANE_MODE" />
-
-                <category android:name="android.intent.category.HOME" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.plotprojects.retail.android.EmulatorTestingService"
+            android:grantUriPermissions="false" />
+        <provider
+            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+            android:authorities="com.lluraferi.decantaloes.AGCInitializeProvider"
             android:exported="false" />
+
         <service
-            android:name="androidx.work.impl.background.gcm.WorkManagerGcmService"
-            android:directBootAware="false"
-            android:exported="@bool/enable_gcm_scheduler_default"
-            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
-            <intent-filter>
-                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
-            </intent-filter>
-        </service>
+            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:dynamic-api"
+            android:value="dynamic-api:1.0.20.300" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader"
+            android:value="8" />
 
         <provider
             android:name="androidx.work.impl.WorkManagerInitializer"
-            android:authorities="com.decantalo.workmanager-init"
+            android:authorities="com.lluraferi.decantaloes.workmanager-init"
             android:directBootAware="false"
             android:exported="false"
             android:multiprocess="true" />
@@ -269,22 +369,10 @@
                 android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
         <service
@@ -303,13 +391,6 @@
         <receiver
             android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
             android:exported="false" />
-
-        <provider
-            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
-            android:authorities="com.decantalo.firebaseperfprovider"
-            android:exported="false"
-            android:initOrder="101" />
-
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:exported="true"
@@ -318,39 +399,12 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </receiver>
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-            android:enabled="true"
-            android:exported="false" >
-        </receiver>
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="android.permission.INSTALL_PACKAGES" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.decantalo.firebaseinitprovider"
+            android:authorities="com.lluraferi.decantaloes.firebaseinitprovider"
             android:exported="false"
-            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
+            android:initOrder="100" />
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
@@ -360,18 +414,6 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <!--
-             Receives GooglePlay execution requests and forwards them to the
-             appropriate internal service.
-        -->
-        <service
-            android:name="com.firebase.jobdispatcher.GooglePlayReceiver"
-            android:exported="true"
-            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
-            <intent-filter>
-                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
-            </intent-filter>
-        </service>
         <!--
             meta-data
             android:name="com.google.android.gms.version"
@@ -385,6 +427,14 @@
             </intent-filter>
         </service>
         <service
+            android:name="com.selligent.sdk.SMHuaweiMessagingService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
             android:name="com.selligent.sdk.SMMediaPlayerService"
             android:exported="false" >
         </service>
@@ -393,15 +443,15 @@
             android:name="com.selligent.sdk.SMPlotNotificationFilter"
             android:exported="false" >
             <intent-filter>
-                <action android:name="com.decantalo.plot.FilterNotifications" />
+                <action android:name="com.lluraferi.decantaloes.plot.FilterNotifications" />
             </intent-filter>
         </receiver>
         <receiver
             android:name="com.selligent.sdk.SMPlotNotificationEventReceiver"
             android:exported="false" >
             <intent-filter>
-                <action android:name="com.decantalo.plot.SentNotification" />
-                <action android:name="com.decantalo.plot.OpenedNotification" />
+                <action android:name="com.lluraferi.decantaloes.plot.SentNotification" />
+                <action android:name="com.lluraferi.decantaloes.plot.OpenedNotification" />
             </intent-filter>
         </receiver>
         <receiver
@@ -429,6 +479,39 @@
             android:name="com.selligent.sdk.SMMapActivity"
             android:label="@string/title_activity_map" >
         </activity>
+        <activity
+            android:name="com.selligent.sdk.SMHuaweiMapActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
+
+        <meta-data
+            android:name="com.huawei.hms.client.channel.androidMarket"
+            android:value="false" />
+
+        <activity
+            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+        </activity>
+        <activity
+            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+
+        <provider
+            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+            android:authorities="com.lluraferi.decantaloes.updateSdk.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
     </application>
 
 </manifest>

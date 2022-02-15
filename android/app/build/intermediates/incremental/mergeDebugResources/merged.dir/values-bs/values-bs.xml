@@ -46,9 +46,51 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Prijavi se"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Prijavi se pomoću Googlea"</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Razno"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Razno"</string>
-    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Obriši pretraživanje"</string>
-    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Pretražite"</string>
+    <string name="hms_abort" priority="translator">"Zaustavi"</string>
+    <string name="hms_abort_message" priority="translator">"Zaustaviti preuzimanje?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s ne može koristiti HMS Core. Pokrenite Optimizator (Upravitelj telefonom) ili idite u opciju Postavke, omogućite sve dozvole za %2$s (uključujući automatsko pokretanje i sekundarno pokretanje) i pokušajte ponovo."</string>
+    <string name="hms_cancel" priority="translator">"Otkaži"</string>
+    <string name="hms_check_failure" priority="translator">"Provjera ažuriranja nije uspjela."</string>
+    <string name="hms_checking" priority="translator">"Traženje ažuriranih sadržaja u toku…"</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Preuzimanje paketa aplikacije HMS Core nije uspjelo."</string>
+    <string name="hms_download_no_space" priority="translator">"Nema dovoljno slobodnog prostora. Preuzimanje nije moguće dovršiti."</string>
+    <string name="hms_download_retry" priority="translator">"Preuzimanje neuspješno. Pokušati ponovno?"</string>
+    <string name="hms_downloading_loading" priority="LT">"Preuzimanje"</string>
+    <string name="hms_install" priority="translator">"Instaliraj"</string>
+    <string name="hms_install_message" priority="translator">"Funkcija HMS Core mora biti instalirana da biste mogli koristiti ovu funkcionalnost. Instalirati?"</string>
+    <string name="hms_is_spoof" priority="LT">"Izgleda da na uređaju imate instaliranu nezvaničnu verziju usluge HMS Core (%1$s). Deinstalirajte HMS Core iz opcije Postavke i vratite se na ovu aplikaciju da instalirate zvaničnu verziju."</string>
+    <string name="hms_push_channel" priority="Original">"Zadano"</string>
+    <string name="hms_retry" priority="translator">"Ponovi"</string>
+    <string name="hms_spoof_hints" priority="LT">"Napomena"</string>
+    <string name="hms_update" priority="translator">"Ažuriraj"</string>
+    <string name="hms_update_continue" priority="LT">"Preuzmi"</string>
+    <string name="hms_update_message" priority="translator">"Ažurirajte na najnoviju verziju aplikacije HMS Core da biste mogli koristiti ovu funkcionalnost. Ažurirati sada?"</string>
+    <string name="hms_update_message_new" priority="LT">"Ova usluga zahtijeva najnoviju verziju sljedećih aplikacija:\n\n%1$s"</string>
+    <string name="hms_update_nettype" priority="LT">"Nema Wi-Fi veze. Preuzeti prijenosom podataka?"</string>
+    <string name="hms_update_title" priority="translator">"HMS Core"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Pretražite"</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Instaliraj"</string>
+    <string name="upsdk_app_download_installing" priority="translator">"Preuzimanje %s..."</string>
+    <string name="upsdk_app_size" priority="translator">"Veličina"</string>
+    <string name="upsdk_app_version" priority="translator">"Verzija"</string>
+    <string name="upsdk_appstore_install" priority="translator">"Potrebno za ažuriranje ove aplikacije: %s. Sad instalirati?"</string>
+    <string name="upsdk_cancel" priority="translator">"Otkaži"</string>
+    <string name="upsdk_checking_update_prompt" priority="LT">"Provjera ažuriranja…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Ažuriranje dostupno. Preuzmite i instalirajte najnoviju verziju."</string>
+    <string name="upsdk_detail" priority="translator">"Detalji"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Nije moguće pronaći informacije. Pokušajte ponovno kasnije."</string>
+    <string name="upsdk_mobile_dld_warn" priority="translator">"Trenutno ste povezani na mobilnu mrežu. Preuzimanje u ovom trenutku će potrošiti %1$s podataka."</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Nema internetske veze. Provjerite svoje mrežne postavke."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Aplikacija"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Kasnije"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Izađi"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Ažuriraj"</string>
+    <string name="upsdk_ota_title" priority="translator">"Nova verzija"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Otkazati instalaciju?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Neuspješno instaliranje."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Da"</string>
+    <string name="upsdk_update_check_no_new_version" priority="Reviewed">"Vaša verzija je ažurirana."</string>
 </resources>

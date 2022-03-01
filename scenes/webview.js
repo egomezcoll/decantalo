@@ -55,6 +55,21 @@ I18n.translations = {
       'fr': 'panier',
       'de': 'warenkorb',
     };
+    const areaPersonal = {
+      'es': 'area-personal',
+      'ca': 'area-personal',
+      'en': 'my-account',
+      'fr': 'mon-compte',
+      'de': 'mein-konto',
+    };
+    const contactoAction = {
+      'es': 'contacta-con-decantalo',
+      'ca': 'contacta-amb-decantalo',
+      'en': 'contact',
+      'fr': 'contact',
+      'de': 'kontakt-mit-decantalo',
+    };
+
     BackHandler.addEventListener('hardwareBackPress', function () {     
       changeWebviewURL('backbutton');
       return true;
@@ -184,11 +199,13 @@ I18n.translations = {
           break;  
         case 'personalArea': 
           setIsNotificationsView(false);
-          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/area-personal`);
+          const personalAreaTranslated = areaPersonal[languageCode];
+          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/${personalAreaTranslated}`);
           break;
         case 'contact': 
           setIsNotificationsView(false);
-          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/contacta-con-decantalo`);
+          const contactTranslated = contactoAction[languageCode];
+          setUrl(`https://www.decantalo.com/${_countryCode}/${_languageCode}/${contactTranslated}`);
           break;  
         case 'chat':
           setIsNotificationsView(false);

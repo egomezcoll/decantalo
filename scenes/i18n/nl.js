@@ -14,6 +14,6 @@ export default {
     SIGNIN_LINK: "Log in op je account",
     NOT_HAVE_ACCOUNT: "Sie haben noch kein Konto bei Decántalo?",
     SIGNUP_LINK: "Erstellen Sie es hier",
-    NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
-    CONTINUE_WITHOUT_LOGIN:"Continuar sense Login",
+    NO_NOTIFICATIONS:"Je hebt geen melding ontvangen, zorg ervoor dat je toestemming geeft om meldingen van Decántalo te ontvangen om van de beste aanbiedingen te genieten.",
+    CONTINUE_WITHOUT_LOGIN:"Doorgaan zonder in te loggen",
 };

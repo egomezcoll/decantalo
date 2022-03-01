@@ -19,6 +19,6 @@ export default {
     FORGOT_QUESTION: "Have you forgotten your password? Don't worry, it happens.",
     FORGOT_INSTRUCTION:"Enter the email account you used to register with Decántalo and we will send you an email so you can create a new one.",
     FORGOT_ENVIAR:"SEND PASSWORD RESTORE EMAIL",
-    NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
+    NO_NOTIFICATIONS:"You have not received any notification, make sure you allow to receive notifications from Decántalo to enjoy the best offers.",
     CONTINUE_WITHOUT_LOGIN:"Continue without Login",
 };

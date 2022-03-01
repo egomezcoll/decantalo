@@ -19,6 +19,6 @@ export default {
     FORGOT_QUESTION: "Vous ne vous souvenez pas de votre mot de passe? Ne vous inquiétez pas, cela arrive parfois.",
     FORGOT_INSTRUCTION:"Entrez le compte de messagerie que vous avez utilisé pour vous inscrire sur Decántalo et nous vous enverrons un e-mail afin que vous puissiez réinitialiser le mot de passe.",
     FORGOT_ENVIAR:"ENVOYER E-MAIL DE RÉCUPÉRATION DE MOT DE PASSE",
-    NO_NOTIFICATIONS:"No ha recibido ninguna notificación, por favor, asegúrese de permitir recibir notificaciones de Decántalo para disfrutar de las mejores ofertas.",
+    NO_NOTIFICATIONS:"Vous n'avez reçu aucune notification, veuillez vous assurer d'autoriser la réception des notifications de Decántalo pour profiter des meilleures offres.",
     CONTINUE_WITHOUT_LOGIN:"Continuer sans Login",
 };
